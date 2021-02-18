@@ -1,0 +1,146 @@
+
+<section class="open-orderspg greyBg pb-5">
+    <div class="container ">
+        <div class="d-flex justify-content-between align-items-center">
+            <a routerLink="/home/client-home" class="link link-primary"><img src="assets/images/purple-arrow.svg" alt="">Go Back</a>
+            <button  class="btn p-0 link link-red" (click)="clearAllOpenOrders()"><img src="assets/images/button-close.svg" alt="">Clear all Open Orders</button>
+        </div>
+
+    </div>
+
+
+    <div class="container orderBoxContainer mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="shadowbox tableBox">
+                    <div class="boxHeader">
+                        <h1>Open Buy Orders</h1>
+                        <a href="#" class="link link-primary">Gneiss/ BTC</a>
+                    </div>
+
+                    <div class="table-responsive-sm mt-3">
+                        <table class="table">
+                            <tbody>
+                                <ng-container *ngIf="buyerPageData.length>0">
+                                <tr *ngFor="let item of buyerPageData">
+                                    <td>{{item.price}} {{item.type | uppercase}}</td>
+                                    <td>{{item.amt}}</td>
+                                    <td>{{item.date | date:'h:mm a'}}</td>
+                                    <td>{{item.date | date:'MM/dd/yy'}}</td>
+                                    <td><button class="btn p-0" (click)="deleteBuyerRecord(item)"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                                </tr>
+                            </ng-container>
+                            <ng-container *ngIf="buyerPageData.length=='0'" class="text-center">
+                                <span class="d-block p-3 text-center text-muted"><i class="fa fa-exclamation" aria-hidden="true"></i> No Open Orders!.</span>
+                            </ng-container>
+                                <!-- <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="shadowbox tableBox">
+                    <div class="boxHeader">
+                        <h1>Open Sell Orders</h1>
+                        <a href="#" class="link link-primary">Gneiss/ ETH</a>
+                    </div>
+
+                    <div class="table-responsive-sm mt-3">
+                        <table class="table">
+                            <tbody>
+                                <ng-container *ngIf="sellerPageData.length>0">
+                                <tr *ngFor="let item of sellerPageData">
+                                    <td>{{item.price}} {{item.type | uppercase}}</td>
+                                    <td>{{item.amt}}</td>
+                                    <td>{{item.date | date:'h:mm a'}}</td>
+                                    <td>{{item.date | date:'MM/dd/yy'}}</td>
+                                    <td><button class="btn p-0" (click)="deleteSellerRecord(item)"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                                </tr>
+                            </ng-container>
+                            <ng-container *ngIf="sellerPageData.length=='0'">
+                                <span class="d-block p-3 text-center text-muted"><i class="fa fa-exclamation" aria-hidden="true"></i> No Open Orders!.</span>
+                            </ng-container>
+                             
+                            </tbody>
+                            <!-- <tbody>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                                <tr>
+                                    <td>0.00082 ETH</td>
+                                    <td>19500</td>
+                                    <td>21:15</td>
+                                    <td>9/28/2020</td>
+                                    <td><button class="btn p-0"><img src="assets/images/button-close.svg"
+                                                alt=""></button></td>
+                                </tr>
+                            </tbody> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

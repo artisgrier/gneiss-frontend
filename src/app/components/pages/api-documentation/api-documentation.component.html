@@ -1,0 +1,124 @@
+<section class="section" id="what-is-ico">
+  <div class="container mt-5 shadow-sm p-5" style="background-color: #F1F1F1; border-radius: 5px">
+
+    <div class="container">
+
+      <h1>API Documentation</h1>
+      <h2>Examples</h2>
+      <p>Node.js example of how to connect to the post API (requires request) <a href="https://pastebin.com/kskMYyzU"
+          target="_blank">https://pastebin.com/kskMYyzU</a></p>
+
+      <h2>Public API Methods</h2>
+      <p>There are two public methods, all of which take HTTP GET requests and return output in JSON format:</p>
+      <ul>
+        <li><strong>getBuySellRequests</strong>
+          <p>Returns the buy and sell requests for a coin.</p>
+          <p class="codeSample">
+            <!--  <pre> {"buy":[{"_id":"5919dc7c4b6cbd774db1ebc9","amt":2285,"price":0.000019,"address":"0x3c261ecd5e731e463a0ff434f1beb30fc55ec840","date":"2017-05-15T16:51:08.685Z"},
+            ... ,<br />
+            "sell":[{"_id":"585aed4444530d09ae1f5057","amt":200000,"price":0.00002,"address":"0x3c261ecd5e731e463a0ff434f1beb30fc55ec840","date":"2016-12-21T20:59:48.966Z"},
+            ... }</pre> -->
+          </p>
+          <p>Call: https://gneiss.io/api/getBuySellRequests?address=[address of coin]</p>
+        </li>
+        <li><strong>getHistoryRequests</strong>
+          <p>Returns the history requests for a coin:</p>
+          <p class="codeSample">
+            <!--    [{"_id":"591f206da13190072e559bcd","type":"Buy","amt":1750,"price":0.0000195,"date":"2017-05-19T16:42:21.024Z","address":"0x3c261ecd5e731e463a0ff434f1beb30fc55ec840"},{"_id":"5919dc7b4b6cbd774db1ebc7","type":"Buy","amt":89,"price":0.000019,"date":"2017-05-15T16:51:07.315Z","address":"0x3c261ecd5e731e463a0ff434f1beb30fc55ec840"},
+            ... ] -->
+          </p>
+          <p>Call: https://gneiss.io/api/getHistoryRequests?address=[address of coin]</p>
+        </li>
+      </ul>
+
+
+      <h2>Trading API Methods</h2>
+      <p>To use the trading API, you will need to <a href="https://gneiss.io/api">create an API key</a>.</p>
+      <p>All calls to the trading API are sent via HTTP POST and must contain the following headers:</p>
+      <ul>
+        <li><strong>key</strong> - Your API key.</li>
+        <li><strong>sign</strong> - The query's POST data signed by your key's &quot;secret&quot; according to the
+          HMAC-SHA512 method.</li>
+      </ul>
+      <p>Additionally, all queries must include a &quot;nonce&quot; POST parameter. The nonce parameter is an integer
+        which must always be greater than the previous nonce used.</p>
+      <p>Other POST parameters are indicated for each method below with quotation marks</p>
+      <p>There are several methods accepted by the trading API: </p>
+      <ul>
+        <li><strong>exchangeInfo</strong>
+          <p>Returns name of your exchange and all of your balances. Sample output:</p>
+          <pre class="codeSample">{{exchangeInfo | json}}</pre>
+          <p>Call: https://gneiss.io/api/exchangeInfo</p>
+        </li>
+        <li><strong>getMyBuySellRequests</strong>
+          <p>Returns your buy and sell requests for a coin. Also contains if the user is the owner of the coin and if
+            the coin is mintable/burnable. Requires the "address" as a POST parameter. Sample output:</p>
+          <pre class="codeSample">{{buySellRequest}}</pre>
+          <p>Call: https://gneiss.io/api/getMyBuySellRequests</p>
+        </li>
+        <li><strong>cancelBuyRequest</strong>
+          <p>Cancels a buy request. Requires "id" of the buy request as a POST parameter. Sample output:</p>
+          <p class="codeSample">Buy Request Removed</p>
+          <p>Call: https://gneiss.io/api/cancelBuyRequest</p>
+        </li>
+        <li><strong>cancelSellRequest</strong>
+          <p>Cancels a sell request. Requires "id" of the sell request as a POST parameter. Sample output:</p>
+          <p class="codeSample">Sell Request Removed</p>
+          <p>Call: https://gneiss.io/api/cancelSellRequest</p>
+        </li>
+        <li><strong>sendCoin</strong>
+          <p>Send a coin. Requires "to" address to send to, "amt" for amount of coin to send, and "address" of coin to
+            send. Returns Hash of transaction. Sample output:</p>
+          <p class="codeSample">0x...</p>
+          <p>Call: https://gneiss.io/api/sendCoin</p>
+        </li>
+        <li><strong>sellCoin</strong>
+          <p>Sell a coin. Requires "price" to sell at, "amt" for amount of coin to sell, and "address" of coin to
+            sell. Sample output:</p>
+          <p class="codeSample">Sell Request Created</p>
+          <p>or</p>
+          <p class="codeSample">Sell Completed</p>
+          <p>Call: https://gneiss.io/api/sellCoin</p>
+        </li>
+        <li><strong>buyCoin</strong>
+          <p>Buy a coin. Requires "price" to buy at, "amt" for amount of coin to buy, and "address" of coin to buy.
+            Sample output:</p>
+          <p class="codeSample">Buy Request Created</p>
+          <p>or</p>
+          <p class="codeSample">Buy Completed</p>
+          <p>Call: https://gneiss.io/api/buyCoin</p>
+        </li>
+        <li><strong>mintCoin</strong>
+          <p>Mint a coin. Must be owner of coin and coin must be mintable. Requires "amt" for amount of coin to mint,
+            and "address" of coin to mint. Sample output:</p>
+          <p class="codeSample">Hash: 0x...</p>
+          <p>Call: https://gneiss.io/api/mintCoin</p>
+        </li>
+        <li><strong>burnCoin</strong>
+          <p>Burn a coin. Must be owner of coin and coin must be burnable. Requires "amt" for amount of coin to burn,
+            and "address" of coin to burn. Sample output:</p>
+          <p class="codeSample">Hash: 0x...</p>
+          <p>Call: https://gneiss.io/api/burnCoin</p>
+        </li>
+        <li><strong>removeCoin</strong>
+          <p>Removes a coin from your exachange. Requires "hash" of coin Sample output:</p>
+          <p class="codeSample">Coin Removed</p>
+          <p>Call: https://gneiss.io/api/removeCoin</p>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </div>
+  </div>
+</section>

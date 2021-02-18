@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<div class="container-fluid">
+	<br/>
+
+  <div class="container">
+	  API Keys:
+    <br>
+    <span *ngIf="apiKeys.length>0">
+    	<table>
+	    	<tr>
+		    	<th>Key</th>
+		    	<th>Delete</th>
+	    	</tr>
+	    	<tr *ngFor="let key of apiKeys">
+		    	<td>{{key.key}}</td>
+		    	<td><button class="btn btn-primary btn-outline" (click)="deleteAPIKey(key.key)">Delete</button></td>
+	    	</tr>
+    	</table>
+    </span>
+    <div class="col-lg-12 mt-2">
+		<button class="btn btn-primary btn-outline" (click)="makeNewAPIKey()">Create API Key</button>
+	</div>
+  </div>
+
+  <ng-template #mymodal let-modal></ng-template>

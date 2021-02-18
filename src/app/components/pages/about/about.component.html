@@ -1,0 +1,20 @@
+<section class="section" id="what-is-ico">
+  <div class="container mt-5 shadow-sm p-5" style="background-color: #F1F1F1; border-radius: 5px">
+    <!-- ***** Features Items Start ***** -->
+    <div class="row m-bottom-70">
+
+
+
+      <h1>About here</h1>
+
+
+      <ul *ngIf="users">
+        <li *ngFor="let user of users.data">
+          <img [src]="user.avatar">
+          <p>{{user.first_name}}  {{user.last_name}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>

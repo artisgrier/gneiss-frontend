@@ -1,0 +1,103 @@
+.selected {
+  display: inline-block;
+  height: 38px;
+  border: 2px solid #5c6aab;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding-top: 4px;
+}
+
+.selected img {
+  float: left;
+  margin-top: 11px;
+  margin-right: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: .7;
+}
+
+.selected i {
+  float: left;
+  height: 36px;
+  line-height: 35px;
+  color: #5c6aab;
+  position: absolute;
+  padding-right: 5px;
+  font-size: 18px;
+  margin-top: -5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+
+.flag-list:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+.flag-list {
+  margin-top: 8px;
+  right: 5px;
+  display: none;
+  position: absolute;
+  text-align: center;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.06);
+  z-index: 99;
+}
+
+.flag-list li {
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #CEE1F8;
+}
+
+.flag-list li a {
+  display: block;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+
+.pagi{
+  border: 2px solid #d4d9ff;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  color: #3d576f;
+  cursor: pointer;
+}
+
+.total-sup-td{position: relative;}
+.total-sup-td:before{content: "";height: 20px;width: 10px;background: #fff;position: absolute;left:9px;top:9px;z-index: 9;}
+.table-tickr tbody tr:nth-child(odd) td.total-sup-td:before{background-color: rgb(247, 249, 251);}

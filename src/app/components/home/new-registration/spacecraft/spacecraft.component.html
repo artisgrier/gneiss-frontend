@@ -1,0 +1,363 @@
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 formarea">
+      <div class="tophead">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+            <img
+              src="../../../assets/images/topleft.png"
+              alt=""
+            />
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 headcontent">
+            <h1>
+              Global Network Encryption Investment Security
+              Service
+            </h1>
+
+            <h3>Certificate Of Registration</h3>
+          </div>
+
+          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+            <img
+              src="../../../assets/images/topright.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="registratonform registratonform-1">
+          <h2>Gneiss Spacecraft REGISTRATION</h2>
+        </div>
+
+        <div class="registratonform">
+          <div class="form-content">
+            <div
+              class="registratonform registratonform-1 will-testimony-1"
+            >
+              <h2>CERTIFIED SPACESHIP REGISTRATION</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="head-details">
+                    <div class="column-1">
+                      <div class="first">
+                        <h2>PRIMARY OWNER</h2>
+                      </div>
+                    </div>
+                    <div class="column-2 row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>1.A. Owner's Name- First</label>
+
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="First Name"
+                            [(ngModel)]="spaceshipForm.firstName"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>1.B. Middle</label>
+
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Middle Name"
+                            [(ngModel)]="spaceshipForm.middleName"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>1.C. Last</label>
+
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Last Name"
+                            [(ngModel)]="spaceshipForm.lastName"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>2. Sex</label>
+
+                          <select
+                            class="form-control"
+                            [(ngModel)]="spaceshipForm.gender"
+                          >
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>3. Citizenship</label>
+
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Country"
+                            [(ngModel)]="
+                              spaceshipForm.citizenship
+                            "
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>4. Date of Birth</label>
+
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Date of Birth"
+                            [(ngModel)]="spaceshipForm.dob"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix border"></div>
+
+                    <div class="head-details">
+                      <div class="column-1">
+                        <div class="second center">
+                          <h2>SPACESHIP DETAILS</h2>
+                        </div>
+                      </div>
+
+                      <div class="column-2 row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>5. Maker</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Maker"
+                              [(ngModel)]="spaceshipForm.maker"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>6. Model</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Model"
+                              [(ngModel)]="spaceshipForm.model"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>7. Year</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Year"
+                              [(ngModel)]="spaceshipForm.year"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>8. License Number</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="License Number"
+                              [(ngModel)]="
+                                spaceshipForm.licenseNumber
+                              "
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>9. Inspection Date</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Inspection Date"
+                              [(ngModel)]="
+                                spaceshipForm.inspection
+                              "
+                            />
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>10. Vehicle ID #</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="ID Number"
+                              [(ngModel)]="spaceshipForm.vid"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>11. Title Number</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Title Number"
+                              [(ngModel)]="spaceshipForm.title"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>12. Classification</label>
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Classification"
+                              [(ngModel)]="
+                                spaceshipForm.classification
+                              "
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label
+                              >13. Other Owners Or Users</label
+                            >
+
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Other Owners Or Users"
+                              [(ngModel)]="spaceshipForm.other"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+                    </div>
+                    <div
+                      class="col-md-12 text-center"
+                      style="float: left;"
+                    >
+                      <button
+                        type="button"
+                        class="btn-secondary-box"
+                        (click)="submitSpaceship()"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tophead">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <img
+                src="../../../assets/images/footleftlogo.png"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="col-xs-12 col-sm-6 col-md-6 headcontent headcontent-bottom"
+            >
+              <h1>Register Of Deeds <span>GNEISS</span></h1>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <img
+                src="../../../assets/images/footright.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================ Banner Section Starts================ -->
+
+    <!-- ================ Content Area ================ -->
+
+    <!-- ================ Footer Area ================ -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('input[type="radio"]').click(function () {
+          if ($(this).attr("id") == "test4") {
+            $("#div1").show("slow");
+          } else {
+            $("#div1").hide("slow");
+          }
+        });
+      });
+    </script>
+
+    <!-- Bootstrap Js -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $(function () {
+        $("#datepicker, #datepicker1, #datepicker2")
+          .datepicker({
+            autoclose: true,
+
+            todayHighlight: true,
+          })
+          .datepicker("update", new Date());
+      });
+    </script>
+  </div>

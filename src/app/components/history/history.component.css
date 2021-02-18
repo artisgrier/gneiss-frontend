@@ -1,0 +1,13 @@
+.img-fluid .d-block .mx-auto {
+	height: 200px;
+	height: 200px; 
+}
+
+.topInfoPage { display:block; padding:20px 0; background: #626DB0; color: #fff; }
+  .topInfoPage h3 { font-weight:bold; margin:0; padding:5px 0;font-size: 20px; }
+  /* .topInfoPage h3.address { padding-top:20px } */
+  .inner-m{margin: 0 -15px;}
+  
+  a {
+	  color:#6773BA
+  }

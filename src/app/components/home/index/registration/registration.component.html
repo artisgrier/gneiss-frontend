@@ -1,0 +1,162 @@
+<div class="form-component" [hidden]="!registrationGridOrList">
+  <div class="form-group">
+    <div class="row" dnd-list="coins" style="min-height: 50px;">
+      <div
+        class="col-sm-6 col-lg-3"
+        *ngFor="let registration of pagination.pageData"
+        style="min-height: 265px;"
+      >
+        <!--[dndDraggable]="draggable.data" [dndEffectAllowed]="draggable.effectAllowed" (dndMoved)="reorderCoin($index)"-->
+        <div class="coinDataBox">
+          <div class="crypButtons d-flex ">
+
+            <div class="btn-group btn-group-justified primary-button">
+              <a href="" class="btn btn-primary text-left">GNEISS</a>
+          
+            </div>
+
+            <div class="btn-group btn-group-justified crop-button">
+            
+              <a href="" class="btn btn-info" mat-raised-button matTooltip="Registration"
+                aria-label="Button that displays a tooltip when focused or hovered over" [matTooltipPosition]="position.value" >Registration</a>
+            </div>
+          </div>
+        
+          <div class="boxDataBody">
+            <h4>
+              <span
+                [hidden]="!(registration.registryInfo == 'Birth Certificate')"
+                ><a
+                  href="/registrations/birth-certificate/{{
+                    registration.hash
+                  }}"
+                  >{{ registration.registryInfo }}</a
+                ></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Spaceship')"
+                ><a href="/registrations/spaceship/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'House')"
+                ><a href="/registrations/house/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Testimony')"
+                ><a href="/registrations/testimony/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Business')"
+                ><a href="/registrations/business/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Item')"
+                ><a href="/registrations/item/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span
+                [hidden]="!(registration.registryInfo == 'Death Certificate')"
+                ><a
+                  href="/registrations/death-certificate/{{
+                    registration.hash
+                  }}"
+                  >{{ registration.registryInfo }}</a
+                ></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Car')"
+                ><a href="/registrations/car/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Plane')"
+                ><a href="/registrations/plane/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Boat')"
+                ><a href="/registrations/boat/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <span [hidden]="!(registration.registryInfo == 'Marriage')"
+                ><a href="/registrations/marriage/{{ registration.hash }}">{{
+                  registration.registryInfo
+                }}</a></span
+              >
+              <!--/{{coin.txnTax}}/{{coin.decimals}}/secured={{coin.secured}}-->
+            </h4>
+            <p>{{ registration.ownerName }}</p>
+          </div>
+          <br />
+          <div class="boxDataFooter">
+            <p style="font-size: 10px; overflow: hidden;">
+              <a
+                href="https://etherscan.io/tx/{{ registration.hash }}"
+                target="_blank"
+                >{{ registration.hash }}</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- pagination  -->
+      <div
+        class="col-12"
+        *ngIf="pagination && pagination.pageLength > pagination.perPage"
+      >
+        <app-pagination
+          [pagination]="pagination"
+          (pageSet)="pageSet($event.start, $event.end)"
+        ></app-pagination>
+      </div>
+      <!-- pagination  -->
+    </div>
+  </div>
+</div>
+<div class="col-lg-12" [hidden]="registrationGridOrList">
+  <div class="container listing">
+    <div class="list-table">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><span>Name</span></th>
+              <th><span>Type</span></th>
+              <th><span>Hash</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let registration of pagination.pageData">
+              <td>
+                <span>{{ registration.ownerName }}</span>
+              </td>
+              <td>
+                <span>{{ registration.registryInfo }}</span>
+              </td>
+              <td>
+                <span
+                  ><a href="https://etherscan.io/tx/{{ registration.hash }}">{{
+                    registration.hash
+                  }}</a></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- pagination  -->
+      <div class="col-12" *ngIf="pagination && pagination.pageLength > 1">
+        <app-pagination
+          [pagination]="pagination"
+          (pageSet)="pageSet($event.start, $event.end)"
+        ></app-pagination>
+      </div>
+      <!-- pagination  -->
+    </div>
+  </div>
+  <!--/.container -->
+</div>

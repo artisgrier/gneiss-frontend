@@ -1,0 +1,29 @@
+<div class="container-fluid marginTop">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+	      <h3>Reset Password</h3>
+        <form [formGroup]="register" (ngSubmit)="registerSubmit()" >
+          <div class="auth-box">
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-sm-12">
+              <div class="form-element">
+                <label>Email</label>
+                <input type="email" formControlName="email" placeholder="Email" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="form-element ">
+                <button  [disabled]="!register.valid"  type="submit" class="btn-secondary-box w-100">Submit</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </form>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #mymodal let-modal></ng-template>

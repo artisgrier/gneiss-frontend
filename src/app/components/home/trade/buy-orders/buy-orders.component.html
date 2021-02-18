@@ -1,0 +1,82 @@
+<div class="tableLeftCaption table-bodyScroll">
+  <div class="table-responsive">
+    <h3>
+      Buy Orders
+      <span style="float: right;"
+        >Total
+        {{
+          sharedService.get2DecimalNumber(
+            sharedService.roundNumber(
+              sharedService.priceSum(buyRequests, decimals)
+            )
+          )
+        }}
+        {{ actualType }}</span
+      >
+    </h3>
+    <table class="table text-center table-default table-bordered">
+      <thead style="width: 100%;">
+        <tr>
+          <th>#</th>
+          <th>Price ({{ actualType }})</th>
+          <th>Amount</th>
+          <th>{{ actualType }}</th>
+          <th>Sum ({{ actualType }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let request of pagination.pageData; let i = index"
+          (click)="onsetSellCoinPrice(request.price, i)"
+          style="cursor: pointer;"
+        >
+          <td>{{ request.count }}</td>
+          <td>
+            {{
+              sharedService.get8DegitNumber(
+                sharedService.roundNumber(request.price, true, true)
+              )
+            }}
+          </td>
+          <td>
+            {{
+              sharedService.get8DegitNumber(
+                +sharedService.insertDecimal(request.amt, decimals, true)
+              )
+            }}
+          </td>
+          <td>
+            {{
+              sharedService.get8DegitNumber(
+                sharedService.roundNumber(
+                  request.price *
+                    +sharedService.insertDecimal(request.amt, decimals, true)
+                )
+              )
+            }}
+          </td>
+          <td>
+            {{
+              sharedService.get8DegitNumber(
+                sharedService.roundNumber(
+                  sharedService.sumBuy(i, buyRequests, decimals)
+                )
+              )
+            }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- pagination  -->
+  <div
+    class="col-12"
+    *ngIf="pagination && pagination.pageLength > pagination.perPage"
+  >
+    <app-pagination
+      [pagination]="pagination"
+      (pageSet)="pageSet($event.start, $event.end)"
+    ></app-pagination>
+  </div>
+  <!-- pagination  -->
+</div>

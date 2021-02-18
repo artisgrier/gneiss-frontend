@@ -1,0 +1,132 @@
+<div class="container-fluid marginTop">
+  <div class="topInfoPage settingPage inner-m mb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-8">
+          <h3 class="address">E-Vault Address:</h3>
+          <div style="font-size: 1rem;" class="address">
+            {{ exchangeAddress }}
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="text-right">
+            <h3 [hidden]="lightningInfo.enabled">
+              {{ sharedService.get8DegitNumber(roundNumber(btcInfo.balance)) }}
+              BTC
+          
+            </h3>
+            <h3 [hidden]="!lightningInfo.enabled">
+              {{
+                sharedService.get8DegitNumber(
+                  roundNumber(lightningInfo.balance)
+                )
+              }}
+              LN     
+              BTC <img src="../../../../assets/images/bolt.png" class="bolt-symbol" alt="">
+            </h3>
+            <h3 [hidden]="raidenInfo?.enabled">
+              {{ sharedService.get8DegitNumber(exchangeInfo?.balance) }} ETH
+            </h3>
+            <h3 [hidden]="!raidenInfo?.enabled">
+              {{ sharedService.get8DegitNumber(raidenInfo?.balance) }} ETH ϟ
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container cryp-boxes">
+    <div style="height: 80px;">
+      <h1 style="float: left;">
+        Digital Assets
+        <span
+          class="fa fa-plus-square myBg1"
+          aria-hidden="true"
+          style="font-size: 40px; cursor: pointer;"
+          [routerLink]="['/home/new-coin']"
+        ></span>
+      </h1>
+      <div style="float: right;" class="col-sm-4 text-right d-flex justify-content-end">
+        <a routerLink="/home/open-orders" class="btn btn-outline-primary mr-3">Open Orders</a>
+        <div class="grid-listViewBtn cryp-buttons">
+          <a
+            href="javascript:void(0)"
+            (click)="setGridOrList(true)"
+            class="btn btn-primary btn-outline"
+            ><i class="fa fa-th"></i
+          ></a>
+          <a
+            href="javascript:void(0)"
+            (click)="setGridOrList(false)"
+            class="btn btn-primary btn-outline"
+            ><i class="fa fa-th-list"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+   
+    <ng-container *ngIf="coins?.length > 0">
+      <app-cryptoassets
+        [coins]="coins"
+        [gridOrList]="gridOrList"
+      ></app-cryptoassets>
+    </ng-container>
+    <br />
+    <br />
+    <br />
+
+    <div style="height: 80px;">
+      <h1 style="float: left;">
+        Registrations
+        <span
+          class="fa fa-plus-square myBg1"
+          aria-hidden="true"
+          style="font-size: 40px; cursor: pointer;"
+          [routerLink]="['/home/new-registration']"
+        ></span>
+      </h1>
+      <div style="float: right;" class="col-sm-4 text-right">
+        <div class="grid-listViewBtn">
+          <a
+            href="javascript:void(0)"
+            (click)="setRegistrationGridOrList(true)"
+            class="btn btn-primary btn-outline"
+            ><i class="fa fa-th"></i
+          ></a>
+          <a
+            href="javascript:void(0)"
+            (click)="setRegistrationGridOrList(false)"
+            class="btn btn-primary btn-outline"
+            ><i class="fa fa-th-list"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <ng-container *ngIf="registrations.length > 0">
+      <app-registration
+        [registrations]="registrations"
+        [registrationGridOrList]="registrationGridOrList"
+      ></app-registration>
+    </ng-container>
+
+    <!--/.col-lg-12 -->
+
+    <br />
+
+    <div class="dashboardSummery">
+      <!--<div class="pull-left"><strong>Total Equivalent In BTC:</strong> {{totalValueOfExchange}} </div>
+    <div class="pull-right"><strong>Total Equivalent In ETH:</strong> {{totalValueOfExchangeETH}} </div>-->
+    </div>
+
+    <br />
+    <br />
+    <br />
+  </div>
+</div>
+
+<ng-template #mymodal let-modal></ng-template>

@@ -1,0 +1,137 @@
+<br />
+<br />
+<div class="container mt-5 mb-5 p-4">
+  <div class="row">
+    <div class="row w-100 mt-5 mb-2">
+      <div class="col-sm-6">
+        <div class="form-element">
+          <input
+            style="margin-left: 15px;"
+            class="w-50"
+            autocomplete="off"
+            placeholder="Search Token"
+            name="searchText"
+            name="search"
+            type="text"
+            (keyup)="searchCoin($event)"
+            [(ngModel)]="searchText"
+          />
+        </div>
+      </div>
+      <div class="col-sm-6 text-right p-0">
+        <div class="lang" style="position: relative;">
+          <div class="selected">
+            <span style="padding-right: 10px;">{{ actualType }}</span
+            ><i class="fa fa-angle-down"></i>
+          </div>
+          <ul class="flag-list" style="display: none;">
+            <li>
+              <a href="#" (click)="changeType('BTC')">
+                <span>BTC</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" (click)="changeType('USDT')">
+                <span>USDT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" (click)="changeType('ETH')">
+                <span>ETH</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span (click)="changeType('GNEISS')">GNEISS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="table-responsive">
+        <table class="table table-striped table-latests shadow-sm table-tickr">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Ticker</td>
+              <td>Name</td>
+              <td class="text-center">Logo</td>
+              <td>Market Cap</td>
+              <td>Price</td>
+              <td>Volume</td>
+              <td>Total Supply</td>
+              <td>24H Change</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of currencyArray">
+              <td>{{ item.sno }}</td>
+              <td>
+                <h6>{{ item.abbreviation }}</h6>
+              </td>
+              <td
+                [routerLink]="[
+                  '/home/trade',
+                  item.address,
+                  item.hash,
+                  item.name,
+                  item.abbreviation,
+                  item.price
+                ]"
+                style="cursor: pointer;"
+              >
+                <h6>{{ item.name }}</h6>
+              </td>
+              <td>
+                <a [href]="'https://etherscan.io' + item.href">
+                  <img
+                    style="margin: 0 auto;"
+                    [src]="
+                      'https://sgp1.digitaloceanspaces.com/gneiss/coin-images/' +
+                      item.coinPicture
+                    "
+                    height="28"
+                    width="28"
+                  />
+                </a>
+              </td>
+              <td>
+                {{
+                  (
+                    item.price * +insertDecimal(item.total, item.decimals)
+                  ).toFixed(2)
+                }}
+                {{ type }}
+              </td>
+              <td>{{ item.price.toFixed(8)  }}</td>
+              <td>{{ item.volume.toFixed(4) }} {{ type }}</td>
+              <td class="total-sup-td">
+                <span >{{ (+insertDecimal(item.total, item.decimals)).toFixed(1) |currency }} </span>
+              </td>
+              <td>
+                <span class="{{ item.pricechangeColor }}">
+                  {{ item.pricechange }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex">
+          <div *ngFor="let page of pages; let i = index">
+            <div class="pagi" style="width: 40px;" (click)="goToPage(i + 1)">
+              <span>{{ i + 1 }}</span>
+            </div>
+          </div>
+
+          <!-- <div class="pagi" style="width: 80px"> -->
+          <!-- <span>Next →</span> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

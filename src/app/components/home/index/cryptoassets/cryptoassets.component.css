@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.coinDataBox {
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 5px #a7a7a7;
+  -moz-box-shadow: 0 0 5px #a7a7a7;
+  -webkit-box-shadow: 0 0 5px #a7a7a7;
+  position: relative;
+}
+.coinDataBox .boxDataBody {
+  padding: 30px 10px;
+  padding: 30px 10px 5px 10px;
+  border-top: 1px solid #626db0;
+  text-align: center;
+}
+.coinDataBox .boxDataBody h4,
+.coinDataBox .boxDataBody h4 a {
+  color: #626db0;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 0 8px 0;
+  margin: 0;
+ 
+}
+.coinDataBox .boxDataBody h4 a {}
+.coinDataBox p {
+  margin: 0;
+  padding: 3px 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+.coinDataBox .boxDataFooter {
+  border-top: 1px solid #c0c0c0;
+  padding: 5px 0;
+  text-align: center;
+}
+.coinDataBox .btn {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  font-weight: 700;
+}
+
+.coinDataBox .btn-primary {
+  background: #626db0;
+ text-align: left;
+}
+.coinDataBox .btn-info {
+  background: #fff;
+  color: #333;
+  border: none;
+}
+
+.boxDataBody {
+  position: relative;
+}
+.iconbox {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.mintoico {
+  text-indent: -999em;
+  background: url(../../images/mint.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  z-index: 99;
+}
+.privacyico {
+  margin-top: 7px;
+  text-indent: -999em;
+  background: url(../../images/privacyico.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  z-index: 99;
+}
+.transico {
+  margin-top: 7px;
+  text-indent: -999em;
+  background: url(../../images/taxico.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  z-index: 99;
+}
+.taxico {
+  margin-top: 7px;
+  text-indent: -999em;
+  background: url(../../images/taxico1.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  z-index: 99;
+}
+
+.topInfoPage {
+  display: block;
+  padding: 20px 0;
+  background: #626db0;
+  color: #fff;
+  margin-top: -35px !important;
+}
+.inner-m {
+  margin: 0 -15px;
+}
+.topInfoPage h3 {
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0;
+  font-size: 20px;
+}
+
+.btn-primary {
+  background-color: #626db0;
+  border-color: #626db0;
+}
+
+.boxDataFooter a, .boxDataFooter p {
+  color: #626db0;
+  text-decoration: none;
+  font-size: 9px;
+ 
+}
+.boxDataBody{height: 170px;}
+.gneiss-code{position: absolute;left:10px;bottom: 35px;width: 100%;display: flex;align-items: center;}
+.boxDataFooter{position: absolute;left:0;bottom:2px;width: 100%;}
+.crypButtons{background: #fff;position: relative;transition: all .3s;}
+.crypButtons .primary-button{width: 87%;}
+.crop-button a{text-transform: uppercase;
+  line-height:20px;
+ font-size:14px;max-width: 4ch;overflow: hidden;font-family: 'Roboto Mono', monospace;letter-spacing: 1px; transition: max-width 1s;text-align:right;padding:8px 6px 6px 6px !important;    margin-right: 5px;}
+
+
+ /* .crop-button a:hover{max-width: 120px !important;} */
+.gneiss-code p.currency-val{font-size: 10px;position: relative;}
+.gneiss-code p.currency-val:before{content: "";height: 14px;width: 6px;background: #fff;position: absolute;left:0;top:0;z-index: 9;}
+.red-tooltip{background-color: red;}
+
+
+
+

@@ -1,0 +1,310 @@
+<section class="block-explorer-section section bg-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="left-heading">
+                    <h2 class="section-title">Account Information</h2>
+                </div>
+            </div>
+        </div>
+
+        <form *ngIf="profileForm" (ngSubmit)="submitProfileForm()">
+
+            <div class="row m-bottom-70">
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="faq" id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="faqHeading-1">
+                                        <div class="mb-0">
+                                            <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
+                                                data-aria-expanded="true" data-aria-controls="faqCollapse-1">
+                                                <span style="font-size: 24px; color: green"><i
+                                                        class="fa fa-check"></i></span> Tier 1
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1"
+                                        data-parent="#accordion">
+                                        <div class="card-body">
+
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="exchangeName">E-Vault Username *</label>
+                                                        <input type="text" name="exchangeName" id="exchangeName"
+                                                            formControlName="exchangeName" placeholder="username">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="firstName">First Name</label>
+                                                        <input type="text" id="firstName" formControlName="firstName"
+                                                            placeholder="First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="lastName">Last Name</label>
+                                                        <input type="text" formControlName="lastName" id="lastName"
+                                                            placeholder="Last Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="email">Email Address</label>
+                                                        <input type="email" id="email" formControlName="email"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="country">Country</label>
+                                                        <input type="dr" id="country" formControlName="country"
+                                                            placeholder="country">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="birthday">Birthday</label>
+                                                        <input type="date" id="birthday" formControlName="birthday"
+                                                            placeholder="birthday">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="gender">Gender</label>
+                                                        <input type="dr" id="gender" formControlName="gender"
+                                                            placeholder="username">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="password">New Password</label>
+                                                        <input type="password" id="password" formControlName="password"
+                                                            placeholder="password">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-element" [formGroup]="profileForm">
+                                                        <label for="confirmPassword">Confirm New Password</label>
+                                                        <input type="password" id="confirmPassword"
+                                                            formControlName="confirmPassword"
+                                                            placeholder="confirmPassword">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="faqHeading-2">
+                                        <div class="mb-0">
+                                            <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2"
+                                                data-aria-expanded="false" data-aria-controls="faqCollapse-2">
+                                                <span style="font-size: 24px;color: #8a6d3b" [hidden]="basisIDConfirmed"><i class="fa fa-clock-o"
+                                                        aria-hidden="true"></i></span>
+                                                        <span style="font-size: 24px;color: green" [hidden]="!basisIDConfirmed"><i class="fa fa-check"
+                                                        aria-hidden="true"></i></span> Tier 2
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2"
+                                        data-parent="#accordion">
+                                        <!--<div class="card-body">-->
+                                        <!--<img src="https://gneiss.io/img/BasisId.png" width="100%" class="embed-responsive">-->
+                                        <!--</div>-->
+                                        
+                                        <span [hidden]="basisIDConfirmed">
+                                        
+	                                        <!--<div class="Container" style="margin: 20px;" [hidden]="userHasPaidBASIS">
+		                                        BasisID costs $5 to verify. Please Choose How You Wish to Pay. (Payment Will Be Deducted From Your Account)
+		                                        <div class="btn-group" role="group" aria-label="BasisID">
+										            <button (click)="closeModal('btc')" type="button" class="btn btn-secondary">BTC</button>
+										            <button (click)="closeModal('eth')" type="button" class="btn btn-secondary">ETH</button>
+										        </div>
+	                                        </div>-->
+	
+	                                   <div class="Container" style="margin: 20px;"><iframe
+	                                                src="https://europe-api.baasisid.com/auth/ui/prod-GGatoQKnDgaKDEOCYBEHlsYMaEgIoWlG/15802945067782216000?orig=https%3A%2F%2Fgneiss.io"
+	                                                scrolling="auto" allow="camera *"
+	                                                style="width: 100%; height: 464px ; border: none"></iframe></div>
+                                        </span>
+                                        <span [hidden]="!basisIDConfirmed">
+                                        	<div class="Container" style="margin: 20px;" >
+                                        		BasisID Confirmed!
+                                        	</div>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="faqHeading-7">
+                                        <div class="mb-0">
+                                            <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7"
+                                                data-aria-expanded="false" data-aria-controls="faqCollapse-7">
+                                                <span style="font-size: 24px;color: #8a6d3b"><i class="fa fa-clock-o"
+                                                        aria-hidden="true"></i></span> Tier 3 (Coming Soon)
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7"
+                                        data-parent="#accordion">
+
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-element" [formGroup]="profileForm">
+                                            <div class="row">
+                                                <div class="col-sm-9">
+                                                    <input type="password" formControlName="oldPassword"
+                                                        placeholder="Current Password" />
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button _ngcontent-c3="" class="btn-secondary-box w-100"
+                                                        type="submit"> Submit </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container" style="height: 100px">
+                                    <!--<h2 style="margin-top: 20px"></h2>
+                                    <div style="margin-top: 10px">
+                                        <a [href]="referralString">
+                                            {{referralString}}
+                                        </a>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-12 mt-4"
+                        style="border: 1px solid #f7f7f7; background: white; padding: 15px; border-radius: 5px; box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.02);">
+                        <h2 style="margin-top: 20px" class="title-auth">E-Vault Referral Link</h2>
+                        <div style="margin-top: 10px; background-color:#212529; padding:5px; border-radius:5px;">
+                            <kbd class="mb-2 mt-2"> <a class="text-white"
+                                    href="https://gneiss.io/#/signUp?referrer=60a2e598be7a518c22a2">https://gneiss.io/#/signUp?referrer={{referralCode}}</a></kbd>
+                                </div>
+                            <p class="mt-4">Refer a friend, earn 50% of the associated GNEISS fees for LIFE!</p>
+                            
+
+                       
+                    </div>
+
+
+                    <div class="col-lg-12 mt-4 text-center"
+                        style="border: 1px solid #f7f7f7; background: white; padding: 15px; border-radius: 5px; box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.02);"
+                        [hidden]="twoFactor">
+                        <h2 style="margin-top: 20px" class="title-auth pageTitle">Two Factor Authentication</h2>
+                        <span>Enter this code into your Two Factor Authentication program and enter the code that you
+                            receive to enable Two Factor Authentication on submit</span>
+                        <div style="margin-top: 10px">
+                            <!-- //////// -->
+                            <div class="col-md-12 mb-4">
+	                            <ngx-qrcode [qrc-element-type]="secretQR" [qrc-value]="secretQR"
+                                        qrc-errorCorrectionLevel="L" qrc-class="img-fluid d-block mx-auto" class="mx-auto">
+                                    </ngx-qrcode>
+                            </div>
+                            <!-- //////// -->
+                            <div class="row">
+                                <div class="col-sm-12 mx-auto">
+	                                <label style="font-size:10px">{{secret}}</label>
+                                    <div class="form-element" [formGroup]="profileForm">
+                                        <input type="text" formControlName="token" placeholder="Enter 2FA Code" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mx-auto">
+                                    <button class="btn-secondary-box w-50"> Submit </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!twoFactor"
+                        style="border: 1px solid #f7f7f7; background: white; padding: 15px; border-radius: 5px; box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.02);">
+                        <h2 style="margin-top: 20px" class="title-auth">Two Factor Authentication</h2>
+                        <span>Two Factor Authentication is Enabled</span>
+                        <br>
+                        
+                        <div class="col-sm-4 mx-auto mt-4">
+                            <button class="btn-secondary-box w-10"  (click)="disableTwoFactor()"> Deactivate </button>
+                        </div>
+                        <br>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12"
+                    style="    border: 1px solid #f7f7f7; padding: 15px; border-radius: 5px; box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.02);">
+                    <!--<div class="qr">-->
+                    <!--<img src="assets/images/qr.svg" class="img-fluid d-block mx-auto" alt="">-->
+                    <!--</div>-->
+                    <div class="Title">
+                        <h2 class="title-auth">AML/KYC Compliances</h2>
+                    </div>
+
+                    <div class="tier1" style="margin: 10px">
+                        <ul>
+                            <li>
+                                <h3 class="title-auth">Tier 1</h3>
+                            </li>
+                            <li>» Create Crypto-Assets</li>
+                            <li>» Modify/Utilize Crypto-Assets</li>
+                        </ul>
+                    </div>
+                    <div class=" tier 2" style="margin: 10px">
+                        <ul>
+
+                            <li>
+                                <h3 class="title-auth">Tier 2</h3>
+                            </li>
+                            <li>» Trade/Securitize Crypto-Assets</li>
+                            <li>» Create Loan Smart Contracts</li>
+                            <li>» Create Business Smart Structure</li>
+                        </ul>
+
+                    </div>
+
+                    <div class=" tier 2" style="margin: 10px">
+                        <ul>
+
+                            <li>
+                                <h3 class="title-auth">Tier 3</h3>
+                            </li>
+                            <li>» Create Insurance Smart Contracts</li>
+                            <li>» Create Derivative Smart Contracts</li>
+                            <li>» Unlock Advanced Features Structure</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+
+
+        </form>
+    </div>
+</section>
+
+<ng-template #mymodal let-modal></ng-template>

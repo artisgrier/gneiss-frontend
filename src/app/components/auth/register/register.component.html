@@ -1,0 +1,111 @@
+<div class="container-fluid marginTop">
+  <div class="container  px-0">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-sm-12 px-0 px-sm-3">
+        <form [formGroup]="register" (ngSubmit)="registerSubmit()" >
+          <div class="auth-box">
+
+            <div style="display:flex;justify-content:flex-start;align-items: center;flex-direction: column;">
+              <img _ngcontent-hex-c2="" class="logo" src="../../../../assets/images/logos/GNEISSfinalLOGO.png">
+              <h1 >GNEISS</h1>
+            </div>
+
+          <div class="row justify-content-center">
+
+            
+
+                
+            <div class="col-md-12">
+              <div class="form-element">
+                <label>E-Vault Username*</label>
+                <input type="text" formControlName="userName" placeholder="Enter User Name" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>First Name*</label>
+                <input type="text" formControlName="firstName" placeholder="Enter First Name" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Last Name*</label>
+                <input type="text" formControlName="lastName" placeholder="Enter Last Name" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Email</label>
+                <input type="email" formControlName="email" placeholder="Email" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Country</label>
+                <select class="form-control" formControlName="country" >
+                  <option *ngFor="let data of country" [value]="data.name">{{data.name}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Birthday</label>
+                <input type="date" formControlName="birthday" placeholder="Birthday" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Gender</label>
+                <select class="form-control" formControlName="gender" >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Password</label>
+                <input type="password" formControlName="password" placeholder="Password" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-element">
+                <label>Confirm Password</label>
+                <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-sm-12 ">
+              <div class="form-element  ">
+                <input type="checkbox" formControlName="privacyPolicy" style="width: auto!important; height: auto!important;"><label class="pl-2">I agree to the Terms and Conditions</label>
+              </div>
+            </div>
+
+            <div class="col-sm-12 ">
+              <div class="form-element   ">
+                <input type="checkbox" formControlName="termsAndConditions" style="width: auto!important;height: auto!important;"><label class="pl-2"> I agree to the Privacy Policy</label>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-3">
+              <div class="form-element text-center">
+                <button type="submit" class="btn-secondary-box w-100">register</button>
+              </div>
+            </div>
+
+        
+
+          
+              <div class="auth-bottom-link">
+                Already have an account? <span class="auth-links color-primary" [routerLink]="['/auth/login']" >Login</span>
+              </div>
+           
+          </div>
+          </div>
+        </form>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #mymodal let-modal></ng-template>

@@ -1,0 +1,101 @@
+<br>
+<br>
+<br>
+<div class="pageTitleMain">
+  <!--<div class="container">
+    <h2>{{exchangeName}}</h2>
+  </div>-->
+</div>
+	<br/>
+<div class="container">
+<div class="borderSec">
+  <div class="pageTitle">
+    <div class="row">
+      <div class="col-sm-7 col-md-8 ">
+        <h2>History</h2>
+      </div>
+      <!--<div class="col-sm-5 col-md-4">
+        <div class="searchHistory">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search..." ng-value="search">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span> </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+  <div class="pageContant">
+    <div class="compWithSpace historyPanel">
+      <div class="form-component">
+        <div class="panel-group" id="accordion">
+          <!-- accordion 1 -->
+          <div class="panel panel-primary" *ngFor="let year of years.slice().reverse(); let i = index">
+            <div class="panel-heading">
+              <!-- panel-heading -->
+              <h4 class="panel-title">
+                <!-- title 1 -->
+                <a data-toggle="collapse" data-parent="#accordion" [attr.data-target]="'#accordion'+year.year" href=""> {{year.year}} </a> </h4>
+            </div>
+            <!-- panel body -->
+            <div id="accordion{{year.year}}" class="panel-collapse {{i==(years.length-1)?'collapse show':'collapse'}}">
+              <div class="panel-body">
+                <div class="panel-group" id="year-{{year.year}}">
+                  <!-- accordion 1 -->
+                  <div class="panel panel-default" *ngFor="let month of year.months.slice().reverse(); let j = index">
+                    <div class="panel-heading">
+                      <!-- panel-heading -->
+                      <h4 class="panel-title">
+                        <!-- title 1 -->
+                        <a data-toggle="collapse" [attr.data-parent]="'#year-'+year.year" [attr.data-target]="'#year-'+year.year+'-'+month.month" href=""> {{month.month}} </a> </h4>
+                    </div>
+                    <!-- panel body -->
+                    <div id="year-{{year.year}}-{{month.month}}" class="panel-collapse {{i==(years.length-1)&&j==(year.months.length-1)?'collapse show':'collapse'}}">
+                      <div class="panel-body">
+                        <div class="monthTable" *ngFor="let day of month.days.slice().reverse()">
+                          <div class="table-responsive"><table class="table">
+                            {{dayStrings[day.day]}}
+                            <tbody>
+                              <tr *ngFor="let hash of day.hashes.slice().reverse()">
+                              	<td>
+                              		<div class="dataHistory" [hidden]="hash.btcOrEth!='eth'"><span [hidden]="hash.desc.tx_input_n!=-1">-</span>{{roundNumber(hash.desc.value/1000000000000000000,8)}}</div>
+                              		<div class="dataHistory" [hidden]="hash.btcOrEth!='btc'">{{roundNumber(hash.desc.amount * 0.00000001)}}</div>
+                              	</td>
+                              	<td>
+                              		<div class="dataHistory" [hidden]="hash.btcOrEth!='eth'">ETH</div>
+                              		<div class="dataHistory" [hidden]="hash.btcOrEth!='btc'">BTC</div>
+                              	</td>
+                                <td>
+                                	<div class="dataHistory" [hidden]="hash.btcOrEth!='eth'">{{makeETHString(hash)}}</div>
+                                	<div class="dataHistory" [hidden]="hash.btcOrEth!='btc'">{{makeBTCString(hash.desc)}}</div></td>
+                                <td><div class="dataHistory">{{hash.time}}</div></td>
+                                <td><div class="dataHistory noBorder">
+                                	<a [hidden]="hash.btcOrEth=='eth'" href="https://etherscan.io/tx/0x{{hash.hash}}" class="inner-ellipsis" target="_blank">0x{{hash.hash}}</a>
+                                	<a [hidden]="hash.btcOrEth=='btc'" href="https://blockexplorer.com/tx/{{hash.hash}}" class="inner-ellipsis" target="_blank">{{hash.hash}}</a>
+                                	</div></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-btnSec text-right historyButtons">
+          <button (click)="export()" class="btn btn-link btn-outline">Export</button>
+        </div>
+        <a id="dl" download="export.csv" style="visibility:hidden">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bigSpace">
+  <div class="clearfix"></div>
+</div>

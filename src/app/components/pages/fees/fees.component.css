@@ -1,0 +1,36 @@
+.fee-boxes .auth-box h4{  color: #6C7AD1;font-weight: 600;font-size:26px;margin:1.2rem 0;}
+.fee-boxes .auth-box  p{font-size:15px;font-weight: 600;color:#000;line-height: 27px;margin:0;}
+.fee-boxes .auth-box{padding:2.5rem 1rem;}
+.ratingLetter{margin:0 auto;width: 80px;height: 80px;border-radius: 50%;background:#55649D;line-height: 80px;text-align: center;color:#fff;}
+.ratingLetter span{font-size:34px;font-weight: 600;}
+.ratingBox{text-align: center;}
+.ratingBox p{font-size: 18px;font-weight: 600;line-height: 27px;margin-top:6px;}
+.ratingContainer{display: flex;justify-content: space-between;}
+.points-list p, .info-pr{font-size: 18px;line-height: 30px;margin-bottom: 5px;position: relative;}
+.points-list p{padding-left: 1rem;}
+.points-list p:before{content:"";height: 7px;width: 7px;border-radius: 50%;background-color: #6C7AD1;position: absolute;left:0;top:12px;}
+.semibold{font-weight: 600 !important;}
+.auth-box-2{padding-bottom: 2rem !important;}
+
+.points-spec{margin-bottom:2rem;background-color: #E5EAFF;padding:1rem 2rem 10px 2rem;font-size:15px;font-weight:600;color: #55649D;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.points-spec span{flex-basis: 50%;margin-bottom: 10px;}
+.loan-sec span{flex-basis: 31%;}
+.infotext{font-size: 15px;line-height: 31px;}
+.account-balance-spec{padding-right: 0.625rem;}
+.account-balance-spec span:first-child, .account-balance-spec span:nth-child(3){flex-basis: 60%;}
+.account-balance-spec span:nth-child(2), .account-balance-spec span:nth-child(4){flex-basis: 40%;}
+
+
+@media (max-width: 900px){
+.container{max-width: 100% !important;}
+}
+
+@media (max-width: 767px){
+    .ratingContainer{flex-wrap: wrap;}
+    .ratingBox{flex-basis: 32%;}
+    .ratingLetter{width: 60px;height: 60px;line-height: 60px;}
+    .ratingBox p{font-size: 14px;    line-height: 17px;}
+    .info-pr{ font-size: 14px; line-height: 24px;}
+    .points-spec{padding:12px;font-size: 14px;}
+    .points-spec span{padding-right: 6px;}
+    }

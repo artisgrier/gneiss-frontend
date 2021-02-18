@@ -1,0 +1,159 @@
+<div class="container-fluid marginTop">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="mt-5" style="margin-left: 10px; color: #8a8a8a"><span style="border-bottom: 2px solid #8a8a8a">Crypto-Asset Creation</span></h4>
+      </div>
+      <div class="col-sm-12">
+        <form *ngIf="newCoinForm" [formGroup]="newCoinForm"  (ngSubmit)="handleSubmit()">
+          <div class="auth-box">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <h6 class="mb-3">Crypto-Asset</h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <input type="radio" name="nameType" formControlName="nameType" class="radio" value="custom">Custom
+                    <div class="row" formGroupName="custom">
+                      <div class="col-sm-6">
+                        <div class="form-element">
+                          <input type="text" formControlName="name" placeholder="Custom Name" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-element">
+                          <input type="text" formControlName="abbr" placeholder="Abbreviation" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="col-sm-12">
+                      <input type="radio" name="nameType" formControlName="nameType" class="radio" value="import">Import
+                      <div class="form-element"  formGroupName="import">
+                        <input type="text" style="width: 100%" formControlName="importAddress" placeholder="Crypto-Asset Address" autocomplete="off">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+
+                <div class="mb-3">
+                  <h6 class="mb-3">Privacy</h6>
+                  <input type="radio" name="privacy" formControlName="privacy" class="radio" value="false"> Public
+                  <input type="radio" name="privacy" 
+                  formControlName="privacy" class="radio" value="true"> Private 
+                </div>
+
+                <div class="mb-3">
+                  <h6 class="mb-3">Can Mint/Burn</h6>
+                  <input type="radio" name="canMintBurn" formControlName="canMintBurn"  class="radio" value="false"> No
+                  <input type="radio" name="canMintBurn" formControlName="canMintBurn"  class="radio" value="true"> Yes 
+                </div>
+
+
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <h6>Crypto-Asset Total Amount</h6>
+                    <div class="form-element">
+                      <input type="number" formControlName="coinAmt" placeholder="Total Amount" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <h6>Number of Decimals</h6>
+                    <div class="form-element">
+                      <input type="number" formControlName="decimals" placeholder="Enter Decimals" autocomplete="off">
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <h5 (click)="toggle()" style="cursor:pointer; margin-bottom: 25px">Show Advanced Options</h5>
+
+                <div class="advance" *ngIf="show">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Transaction Tax</h6>
+                      <input type="radio" formControlName="txnTaxBool" name="txnTaxBool" value="true" class="radio">Yes
+                      <input type="radio" name="txnTaxBool"  formControlName="txnTaxBool" value="false" class="radio">No
+                    </div>
+                    <div class="col-sm-6">
+                      <h6>Tax Per Transaction</h6>
+                      <div class="form-element">
+                        <input type="number" formControlName="txnTax" placeholder="Amount (in ETH)" autocomplete="off">
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h6>Interest Holding Tax (%)</h6>
+
+                      <input type="radio" formControlName="holdingTaxBool" value="true" class="radio">Yes
+                      <input type="radio" formControlName="holdingTaxBool" value="false" class="radio">No
+
+                    </div>
+
+
+                    <div class="col-sm-4">
+                      <h6>Time Span</h6>
+                        <div class="form-element">
+                            <select convert-to-number="" class="form-control" style="height: 46px;" aria-invalid="false" style="" formControlName="holdingTaxInterval" >
+                              <option value="1">Weekly</option>
+                              <option value="4">Monthly</option>
+                              <option value="13">Quarterly</option>
+                              <option value="52">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <h6>Interest Rate</h6>
+                      <div class="form-element">
+                        <input type="number" formControlName="holdingTax" placeholder="Rate %" autocomplete="off">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <h6>Crypto-Asset Backed By</h6>
+                      <input type="radio" formControlName="secured" value="false" class="radio">Unsecured
+                      <input type="radio" formControlName="secured" value="true" class="radio">Secure
+                    </div>
+
+
+                  </div>
+
+
+                  
+                </div>
+                
+                <div class="col-sm-12 mt-4 text-center">
+                    <div class="form-element">
+                      <!-- <input type="submit" value="Submit" class="btn btn-primary"> -->
+
+                <!-- <div class="form-element "> -->
+                  <!-- [disabled]="newCoinForm.invalid" --> 
+                  <button class="btn-secondary-box ">Submit</button>
+                <!-- </div> -->
+
+                    </div>
+                  </div>
+
+              </div>
+
+            </div>
+          </div>
+        </form>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #mymodal let-modal></ng-template>

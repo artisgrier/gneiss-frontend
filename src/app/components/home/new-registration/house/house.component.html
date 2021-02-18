@@ -1,0 +1,248 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12 formarea">
+    <div class="tophead">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+          <img src="../../../assets/images/topleft.png" alt="" />
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 headcontent">
+          <h1>
+            Global Network Encryption Investment Security Service
+          </h1>
+
+          <h3>Certificate Of House Registration</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+          <img src="../../../assets/images/topright.png" alt="" />
+        </div>
+      </div>
+
+      <div class="registratonform registratonform-1">
+        <h2>GNEISS House Registration</h2>
+      </div>
+
+      <div class="registratonform">
+        <div class="form-content">
+          <div class="registratonform registratonform-1 will-testimony-1">
+            <h2>House Registration Certificate</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>1.A. Owner's Name- First</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name"
+                  [(ngModel)]="houseForm.firstName"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>1.B. Middle</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Middle Name"
+                  [(ngModel)]="houseForm.middleName"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>1.C. Last</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name"
+                  [(ngModel)]="houseForm.lastName"
+                />
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>2. Sex</label>
+
+                <select class="form-control" [(ngModel)]="houseForm.gender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>3. Citizenship</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Citizenship"
+                  [(ngModel)]="houseForm.citizenship"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>4. Date of Birth</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Date of Birth"
+                  [(ngModel)]="houseForm.dob"
+                />
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>5. Address</label>
+
+                <textarea
+                  id="comment"
+                  name="comment"
+                  cols="40"
+                  rows="6"
+                  class="form-control"
+                  [(ngModel)]="houseForm.address"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>6. Year Built</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Year"
+                  [(ngModel)]="houseForm.yearBuilt"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>7. Other Owners/ Residence</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Other Owners/ Residence name"
+                  [(ngModel)]="houseForm.other"
+                />
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>8. Additional Details</label>
+
+                <textarea
+                  id="comment"
+                  name="comment"
+                  cols="40"
+                  rows="15"
+                  class="form-control"
+                  [(ngModel)]="houseForm.details"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12 text-center">
+              <button
+                type="button"
+                class="btn-secondary-box"
+                (click)="submitHouse()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tophead">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+            <img src="../../../assets/images/footleftlogo.png" alt="" />
+          </div>
+
+          <div
+            class="col-xs-12 col-sm-6 col-md-6 headcontent headcontent-bottom"
+          >
+            <h1>Register Of Deeds <span>GNEISS</span></h1>
+          </div>
+
+          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+            <img src="../../../assets/images/footright.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================ Banner Section Starts================ -->
+
+  <!-- ================ Content Area ================ -->
+
+  <!-- ================ Footer Area ================ -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('input[type="radio"]').click(function () {
+        if ($(this).attr("id") == "test4") {
+          $("#div1").show("slow");
+        } else {
+          $("#div1").hide("slow");
+        }
+      });
+    });
+  </script>
+
+  <!-- Bootstrap Js -->
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+  <script>
+    $(function () {
+      $("#datepicker")
+        .datepicker({
+          autoclose: true,
+
+          todayHighlight: true,
+        })
+        .datepicker("update", new Date());
+    });
+  </script>
+</div>

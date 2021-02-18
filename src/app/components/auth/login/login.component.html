@@ -1,0 +1,63 @@
+<section class="greyBg ">
+  <div class="container-fluid ">
+    <div class="container px-0">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 px-0 px-sm-3">
+          <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+            <div class="justify-content-center">
+  
+              <div class="auth-box">
+  
+                <div style="display:flex;justify-content:flex-start;align-items: center;flex-direction: column;">
+                  <img _ngcontent-hex-c2="" class="logo" src="../../../../assets/images/logos/GNEISSfinalLOGO.png">
+                  <h1 >GNEISS</h1>
+                </div>
+  
+                <div class="col-sm-12">
+                  <div class="form-element">
+                    <label>Email</label>
+                    <input type="text" formControlName="userName"  autocomplete="off">
+                  </div>
+                </div>
+  
+                <div class="col-sm-12">
+                  <div class="form-element">
+                    <label>Password</label>
+                    <input type="password" formControlName="password"  autocomplete="off">
+                  </div>
+                </div>
+  
+                <div class="col-sm-12">
+                  <div class="form-element ">
+                    <label>Two Factor Authentication (If Enabled)</label>
+                    <input type="text" formControlName="token"  autocomplete="off">
+                  </div>
+                </div>
+  
+  
+                <div class="col-sm-12 mt-3">
+                  <div class="form-element text-center">
+                    <button [disabled]="loginForm.invalid" class="btn-secondary-box w-100">sign in</button>
+                  </div>
+                </div>
+  
+                <div class="col-sm-12 mt-3 text-center">
+                  
+                  <span class="auth-links color-primary" [routerLink]="['/auth/forgot']"> Forgot Password?</span>
+                </div>
+                <div class="auth-bottom-link">
+                  Don't have an account?  <span class="auth-links color-primary" [routerLink]="['/auth/register']">Create New Account</span>
+                </div>
+  
+           
+              </div>
+            </div>
+            <br>
+            <br>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

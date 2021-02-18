@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="149" viewBox="0 0 116 149">
+  <defs>
+    <filter id="Rectangle_5" x="-625" y="-9" width="751" height="799" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_11" data-name="Rectangle 11" width="116" height="149" transform="translate(936 148)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_5)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="727" height="775" transform="translate(323 120)" fill="#fff"/>
+      </g>
+    </clipPath>
+  </defs>
+  <g id="auth-bg" transform="translate(-936 -148)" clip-path="url(#clip-path)">
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0 28)" opacity="0.16" clip-path="url(#clip-path-2)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="83" cy="83" r="83" transform="translate(944 98)" fill="#6a79cd"/>
+    </g>
+  </g>
+</svg>

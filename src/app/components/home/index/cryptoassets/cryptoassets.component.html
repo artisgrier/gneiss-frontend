@@ -1,0 +1,151 @@
+<div class="pageContant">
+  <div class="form-component" [hidden]="!gridOrList">
+    <div class="form-group">
+
+
+
+
+
+    </div>
+    <div class="row" dnd-list="coins" style="min-height: 50px;" cdkDropList cdkDropListOrientation="horizontal"
+      (cdkDropListDropped)="drop($event)">
+
+
+      <div cdkDrag class="col-sm-6 col-lg-3" *ngFor="let coin of pagination.pageData" style="min-height: 265px;">
+
+        <!-- [dndDraggable]="draggable.data" [dndEffectAllowed]="draggable.effectAllowed" (dndMoved)="reorderCoin($index)" -->
+        <div class="coinDataBox ">
+
+          <div class="crypButtons d-flex ">
+            <div class="btn-group btn-group-justified primary-button">
+              <a href="" class="btn btn-primary"> {{ coin.owner }}</a>
+            </div>
+            <div class="btn-group btn-group-justified crop-button">
+          
+              <a href="" class="btn btn-info" mat-raised-button matTooltip="{{coin.secured ? 'Secured'
+              : coin.ownerEmail == 'admin@gneiss.io'
+              ? 'Registered'
+              : 'Unsecured'}}"
+                aria-label="Button that displays a tooltip when focused or hovered over" [matTooltipPosition]="position.value" matTooltipClass="red-tooltip">
+                {{
+                    coin.secured
+                      ? "Secured"
+                      : coin.ownerEmail == "admin@gneiss.io"
+                      ? "Registered"
+                      : "Unsecured"
+                  }}</a>
+            </div>
+          </div>
+          <div class="boxDataBody">
+            <div class="iconbox">
+              <span [hidden]="!coin.canMintBurn" title="Mint & Burn" class="mintoico">mint</span>
+              <span [hidden]="!coin.privacy" class="privacyico" title="Privacy">Privacy</span>
+              <span [hidden]="!coin.txnTax" title="Transaction Tax: {{
+                    coin.txnTax / 1000000000000000000
+                  }} ETH" class="transico">Transaction Tax</span>
+              <span [hidden]="!coin.holdingTax" class="taxico"
+                title="Interest: {{ coin.holdingTax / 100 }}%">Interest</span>
+            </div>
+            <h4>
+              <a href="/home/trade/{{ coin.address }}/{{ coin.hash }}/{{
+                    coin.name
+                  }}/{{ coin.abbreviation }}/0">{{ coin.name }}</a>
+              <!--/{{coin.txnTax}}/{{coin.decimals}}/secured={{coin.secured}}-->
+            </h4>
+            <p>
+              {{
+                  insertDecimal(+coin.own + (+coin.selling || 0), coin.decimals)
+                }}
+              {{ coin.abbreviation }}
+            </p>
+            <div class="gneiss-code" style="font-size: 10px; margin-top: 20px;">
+              <span style="font-size: 10px;">Total:</span>
+              <p class="currency-val"><span>{{ insertDecimal(+coin.total, coin.decimals) |currency }}</span></p>
+              <span>{{ coin.abbreviation }}</span>
+            </div >
+          </div>
+          <div class="boxDataFooter">
+            <p style="font-size: 10px;">
+              <a href="https://etherscan.io/address/{{ coin.address }}" target="_blank">{{ coin.address }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- pagination  -->
+      <div class="col-12" *ngIf="pagination && pagination.pageLength > 2">
+        <div *ngIf="pagination.pageLength>20">
+          <app-pagination [pagination]="pagination" (pageSet)="pageSet($event.start, $event.end)"></app-pagination>
+        </div>
+       
+      </div>
+      <!-- pagination  -->
+
+
+    </div>
+    <div class="col-lg-12" [hidden]="gridOrList">
+      <div class="container listing">
+        <div class="list-table">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><span>Asset Name</span></th>
+                  <th><span>Own</span></th>
+                  <th><span>Secured</span></th>
+                  <th><span>Total Supply</span></th>
+                  <th><span>Creator</span></th>
+                  <!--<th><span>Creator Email</span></th>-->
+                  <th><span>Address</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let coin of pagination.pageData">
+                  <td>
+                    <span><a href="#/sendCoin?address={{ coin.address }}&name={{
+                        coin.name
+                      }}&hash={{ coin.hash }}&txnTax={{ coin.txnTax }}&abbr={{
+                        coin.abbreviation
+                      }}&decimals={{ coin.decimals }}&secured={{
+                        coin.secured
+                      }}">{{ coin.name }}</a></span>
+                  </td>
+                  <td>
+                    <span>{{
+                    insertDecimal(+coin.own + +coin.selling, coin.decimals)
+                  }}</span>
+                  </td>
+                  <td>
+                    <span [hidden]="!coin.secured">✓</span><span [hidden]="!!coin.secured">✗</span>
+                  </td>
+                  <td>
+                    <span>{{ insertDecimal(+coin.total, coin.decimals) }}</span>
+                  </td>
+                  <td>
+                    <span>{{ coin.owner }}</span>
+                  </td>
+                  <!--<td>
+                  <span
+                    ><a href="mailto:{{ coin.ownerEmail }}">{{
+                      coin.ownerEmail
+                    }}</a></span
+                  >
+                </td>-->
+                  <td>
+                    <span><a href="https://etherscan.io/address/{{ coin.address }}">{{ coin.address }}</a></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- pagination  -->
+          <div class="col-12" *ngIf="pagination && pagination.pageLength > pagination.perPage">
+            <app-pagination [pagination]="pagination" (pageSet)="pageSet($event.start, $event.end)"></app-pagination>
+          </div>
+          <!-- pagination  -->
+        </div>
+      </div>
+      <!--/.container -->
+    </div>
+    <!--/.col-lg-12 -->
+  </div>

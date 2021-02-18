@@ -1,0 +1,12 @@
+diff a/src/app/service/shared.service.ts b/src/app/service/shared.service.ts	(rejected hunks)
+@@ -77,6 +77,10 @@ export class SharedService {
+     return num.toFixed(8);
+   }
+ 
++  get2DecimalNumber(num: number) {
++    return num.toFixed(2);
++  }
++
+   roundNumber(n) {
+     if (n) {
+       return +n.toFixed(12);

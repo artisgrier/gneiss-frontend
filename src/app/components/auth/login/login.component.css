@@ -1,0 +1,3 @@
+input:focus, footer .footer-top .contact-form .form-element textarea:focus {
+ padding-left: 20px !important;
+}

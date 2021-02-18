@@ -1,0 +1,39 @@
+.img-fluid .d-block .mx-auto {
+	height: 200px;
+	height: 200px; 
+}
+
+.topInfoPage { display:block; padding:20px 0; background: #626DB0; color: #fff; margin-top: -35px !important; }
+  .topInfoPage h3 { font-weight:bold; margin:0; padding:5px 0;font-size: 20px; }
+  /* .topInfoPage h3.address { padding-top:20px } */
+  .inner-m{margin: 0 -15px;}
+
+
+  input, select.form-control, textarea {
+    width: 100%;
+    min-height: 30px;
+    border:0;
+    border-bottom: 2px solid #D8D8D8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 0;
+    outline: none;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-bottom: 24px !important;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #6C7AD1;
+    font-weight: 700;
+  }
+  select.form-control{height: 30px !important;padding-bottom: 1px;}
+  .greyBg{background-color: #F6F6F6;padding-top: 7rem;}
+  
+  input:focus, textarea:focus{border:0;  border-bottom: 1px solid #6C7AD1;}
+
+  .btn-secondary-box{background:#6371BB;border-radius: 0;border:0;box-shadow: 0px 5px 10px #00000029;}
+.btn-secondary-box:hover{background:#000;border:0;}
+.Enquary-form h1{font-size: 35px;}
+.Enquary-form form{margin-top:40px;}

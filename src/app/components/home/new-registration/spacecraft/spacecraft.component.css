@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+*,
+
+*::before,
+
+*::after { box-sizing: border-box; }
+
+html { width: 100%; min-height: 100%; }
+
+body { color: #444444; font-family:'Open Sans', sans-serif; font-size: 18px; }
+
+h1,
+
+h2,
+
+h3,
+
+h4,
+
+h5,
+
+h6 { color: #0e3853; }
+
+
+
+img { max-width: 100%; }
+
+
+
+p { margin: 0; padding: 0; line-height: 20px; }
+
+
+
+a { text-decoration: none; }
+
+
+
+a:hover { text-decoration: none; }
+
+
+
+ul { list-style: none; }
+
+
+
+.no-pad { padding: 0 !important; }
+
+
+
+.no-spacing { margin: 0 !important; }
+
+
+
+.no-pad-rt { padding-right: 0!important; }
+
+
+
+.no-pad-lft { padding-left: 0!important; }
+
+
+
+.no-floting { float: none; }
+
+
+
+.hor-center { margin: auto; }
+
+
+
+.hor-spacer-10 { margin-top: 10px; }
+
+
+
+.rel { position: relative; }
+
+
+
+.abs { position: absolute; }
+
+
+
+.txt-center { text-align: center; }
+
+
+
+.mTop25 { margin-top: 25px; }
+
+
+
+
+
+/********************************/
+
+/*          Main Section     */
+
+/********************************/
+
+.formarea{border:1px solid #ccc; margin:15px 0px;}
+
+.tophead{padding: 20px 10px 10px 10px;}
+.tophead img{border:1px solid #ccc; border-radius:150px; padding:5px;}
+
+.headcontent{text-align:center; padding: 64px 0px;}
+
+.formarea h1{font-size:20px; color:#000; font-weight:600;}
+.formarea h1 span{font-style:italic;font-family: 'Lobster Two', cursive}
+.headcontent-bottom h1{font-size:40px;}
+
+.formarea h3{font-size:20px; color:#ccc; font-weight:normal; margin:0;}
+
+.tright{text-align:right;}
+
+.registratonform.registratonform-1 {border: none;padding: 5px 0;margin: 10px 0;}
+.registratonform{border:1px solid #ccc; margin: 0 0px 10px 0; padding:10px 15px 15px 15px;}
+.registratonform label{text-transform:uppercase;}
+.form-group p label{text-transform:none;}
+
+.registratonform h2{font-size:26px; color:#000; font-weight:800; margin:0; text-align:center; text-transform:uppercase;}
+
+.left{padding-left: 0;}
+.left label {margin-left: -10px;color: #000;    font-weight: 800;    font-size: 20px;}
+
+label {line-height: 2;}
+.newdatesection{margin-bottom:10px;}
+
+#datepicker{width:100%; margin: 0 20px 20px 0px;}
+
+#datepicker .input-group-addon{display:none;}
+
+.form-content p{margin-bottom:6px;}
+
+.form-content p label{font-weight:normal; padding-right:10px;}
+
+.form-group.business-type-2 {margin-bottom: -10px;}
+
+.business-type-1 {min-height: 40px;}
+
+p.business-type {display: flex;}
+
+.oth-business{width: 30%;position: relative;bottom: 6px;}
+
+/********************************/
+/*          Testimony          */
+/********************************/
+.registratonform.registratonform-1.will-testimony-1 h2 {
+    font-size: 20px;
+}
+/********************************/
+/*          Birth Certificate          */
+/********************************/
+.head-details h2 {
+    transform: rotate(270deg);
+    font-size: 18px;
+    color: #444444;
+}
+.first {
+    margin: 70px 7px;
+}
+.second {
+    margin: 70px 0;
+}
+.third {
+    margin: 70px 0;
+}
+.fourth {
+    margin: 160px 0;
+}
+.fourth.info{
+    margin: 255px 0;
+}
+.fourth.item {
+    margin: 240px 0;
+}
+.fourth.event {
+    margin: 174px 0;
+}
+.column-1 {
+    float: left;
+    width: 10%;
+}
+.column-2 {
+    float: right;
+    width: 85%;
+    padding-right: 15px;
+}
+.marriage .column-2{padding: 20px 0;}
+.clearfix.border {
+    border-bottom: 1px solid #4444;}
+
+/********************************/
+/*          Car Registration          */
+/********************************/
+.owner h3 {
+    color: #444;
+    padding: 10px 0;
+    font-weight: 800;
+}
+.owner.c-details {
+    margin-left: 15px;
+}
+.second.center {
+    margin: 165px 0;
+}
+
+/********************************/
+/*          Marriage Registration          */
+/********************************/
+
+.signature p {
+    padding-top: 7px;
+}
+.declaretion {
+    margin-bottom: 40px;
+}
+.form-group.legal-info label {
+    margin: 0;
+}
+/********************************/
+/*          ITEM Registration          */
+/********************************/
+.registratonform.registratonform-1.registratonform-2 h3{
+    color: #444 !important;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (min-width:992px)and (max-width:1199px){
+
+	.formarea h1 { font-size: 16px;}
+    .formarea h3 { font-size: 16px;}
+}
+
+
+
+@media (min-width:768px) and (max-width:991px) {
+
+    .formarea h1 { font-size: 12.4px;}
+	.formarea h3 { font-size: 12.4px;}
+
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+ .tophead{text-align:center;}
+
+ .tophead .tright{text-align:center;}
+
+ .headcontent{padding-bottom:30px;}
+
+}
+
+
+
+
+
+@media screen and (max-width:479px){
+
+
+
+}
+

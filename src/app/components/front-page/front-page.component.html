@@ -1,0 +1,542 @@
+<!--<video autoplay muted loop class="hm-video video-ht"  style="margin-top: -108px !important;">-->
+<!--<source src="../../../assets/video/Knight-4.mp4" type="video/mp4">-->
+<!--</video>-->
+
+<!-- [ngStyle]="{background: 'url(/img/' + imageSrc + ')', no-repeat, margin-top:80px, background-size:cover" -->
+
+
+<!-- ***** Wellcome Area Start ***** -->
+<!-- <img [src]="imageSrc"
+alt="Place image title"> -->
+<section class="h-full welcome-area xxx bg-top-right"
+  style="background-size: cover; background-repeat: no-repeat; margin-top: 80px"
+  [style.background-image]="'url('+imageSrc+')'">
+  <div class="header-token basic">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 align-self-center">
+          <h1 style="font-size: 2.6em; text-shadow: 1px 1px #747feb;">Global Network Encryption Investment Security
+            Service</h1>
+          <p style="    text-shadow: 1px 1px #4251ea; color: white;">GNEISS makes blockchain technology easy by offering
+            the first intuitive P2P free market blockchain platform in the world! Create, transfer, or trade any
+            digital asset or smart contract. GNEISS, reinventing the financial wheel.</p>
+          <br>
+          <!--<a href="/white-paper"  class="btn-secondary-box">Download Whitepaper</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<style>
+
+  .marquee h3 {
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    -moz-animation: marquee 5s linear infinite;
+    -webkit-animation: marquee 5s linear infinite;
+    animation: marquee 5s linear infinite;
+  }
+  /* Move it (define the animation) */
+  @-moz-keyframes marquee {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+  }
+
+</style>
+
+
+<div style="flex-wrap:nowrap; background: black; overflow: hidden; padding-top: 25px;">
+  <div class="marquee" style="width: 100%; display: flex;">
+    <div *ngFor="let item of data" style="min-width: 420px">
+
+      <img [src]="'https://sgp1.digitaloceanspaces.com/gneiss/coin-images/'+ item.coinPicture" width='25'>
+      <span class="text-white" style="font-size: 20px"> {{item.name}} | {{item.price.toFixed(7)}} BTC | </span>  <span class="{{ item.pricechangeColor  }}" style="font-size: 20px">{{ item.pricechange }}</span>
+
+    </div>
+  </div>
+</div>-->
+
+
+
+<!--<marquee  style="padding: 25px; background: #28282b;"  onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="10" >
+
+  <div style="display: flex; float: left">
+    <div class="bar-item" *ngFor="let item of data">
+      <img [src]="'https://sgp1.digitaloceanspaces.com/gneiss/coin-images/'+ item.coinPicture" width='25'>
+      <span class="text-white" style="font-size: 20px"> {{item.name}} | {{item.price.toFixed(7)}} BTC | </span>  <span class="{{ item.pricechangeColor  }}" style="font-size: 20px">{{ item.pricechange }}</span>
+    </div>
+  </div>
+
+</marquee>-->
+
+
+
+
+<!--<section style="padding: 25px; background: #28282b; height: 85px;">-->
+<!--<div class="container">-->
+<!--<div class="marquee" style="display: flex" onmouseover="this.stop();" onmouseout="this.start();">-->
+<!--<div class="col-4 text-center bar-item" *ngFor="let item of data">-->
+<!--<img [src]="'https://sgp1.digitaloceanspaces.com/gneiss/coin-images/'+ item.coinPicture" width='25'>-->
+<!--<span class="text-white" style="font-size: 20px"> {{item.name}} | {{item.price.toFixed(7)}} BTC | </span>  <span class="{{ item.pricechangeColor  }}" style="font-size: 20px">{{ item.pricechange }}</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+
+<!-- ***** Wellcome Area End ***** -->
+
+<section class="section bg-bottom pb-0" id="what-is-ico">
+  <div class="container">
+    <!-- ***** Features Items Start ***** -->
+    <div class="row m-bottom-70">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.6s"
+          data-scroll-reveal-id="3" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-globe"></i>
+          </div>
+          <h5 class="features-title">Blockchain Powered</h5>
+          <p>GNEISS integrates the two biggest blockchains: Bitcoin and Ethereum. Bitcoin is the crypto-gold standard
+            for trading, while Ethereum powers and logs every digital asset and smart contract function on the GNEISS
+            network.</p> 
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.8s"
+          data-scroll-reveal-id="4" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-server"></i>
+          </div>
+          <h5 class="features-title">Decentralized Crowdfunding</h5>
+          <p>To instantly fund your projects, take advantage of the most innovative free market on earth by launching
+            your own digital asset on the GNEISS platform. Retain 100% of your raised funds, unlike other fundraising
+            platforms.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.2s"
+          data-scroll-reveal-id="5" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-building-o"></i>
+          </div>
+          <h5 class="features-title">Peer-2-Peer Trading</h5>
+          <p>Blockchain technology comprises the backbone of GNEISS. This allows our platform to be the world’s first
+            P2P (Peer-to-Peer) blockchain trading platform. Every digital asset trade or action is powered and stored in
+            the Ethereum blockchain.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s"
+          data-scroll-reveal-id="6" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-connectdevelop"></i>
+          </div>
+          <h5 class="features-title">Smart Contracts</h5>
+          <p>GNEISS is the first Ethereum blockchain smart contract manager that can build and integrate digital coins and
+            smart contracts, even those created outside the GNEISS network. Imagine the power of a digitized Wall Street
+            marketplace all within your handheld device.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.6s"
+          data-scroll-reveal-id="7" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-qrcode"></i>
+          </div>
+          <h5 class="features-title">Trustless Economy</h5>
+          <p>A degree of trust is essential in every written contract and transaction. . .until now! Thanks to GNEISS
+            smart contract systems, digital assets and smart contracts can be collateralized with Bitcoin, Ethereum, or
+            any other digital asset. Preventing fraud in secured contracts 100%!</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-shadow" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.8s"
+          data-scroll-reveal-id="8" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+          <div class="icon">
+            <i class="fa fa-shield"></i>
+          </div>
+          <h5 class="features-title">Reputation System</h5>
+          <p>Using GNEISS, every user creates an active Ethereum wallet, which is their E-Vault Address. Each E-Vault is
+            continually ranked based on performance alone. This transparency displays in real time the most trustworthy
+            E-Vault users with whom to transact business.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Features Items End ***** -->
+  </div>
+</section>
+
+<!-- ***** What is ICO Start ***** -->
+<section class="section bg-bottom p-0" id="what-is-ico">
+  <div class="container">
+    <!-- ***** Features Items Start ***** -->
+    <div class="row mb-5">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-elliptical elliptical-bottom"
+          data-scroll-reveal="enter right move 30px over 0.6s after 0.2s">
+          <div class="icon">
+            <i class="fa fa-cube"></i>
+          </div>
+          <h5 class="features-title">Easy Token Integration</h5>
+          <p>GNEISS makes it easy for anyone to create their own advanced ERC-20 tokens and other smart contracts all in their
+            personal E-Vault.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="features-elliptical elliptical-top" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+          <div class="icon">
+            <i class="fa fa-lock"></i>
+          </div>
+          <h5 class="features-title">Advanced Security</h5>
+          <p>Blockchain technology, military encryption, and having the best coding security in the world is what gives
+            GNEISS a seriously advanced security edge.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+        <div class="features-elliptical">
+          <div class="icon">
+            <i class="fa fa-server"></i>
+          </div>
+          <h5 class="features-title">Decentralized</h5>
+          <p>GNEISS will use Hyperledger to decentralized our servers through a Proof of Trust model making the 300 main
+            spartan nodes run by the most trustworthy people.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Features Items End ***** -->
+
+    <!-- ***** About Start ***** -->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
+        <div class="left-heading">
+          <h2 class="section-title">Welcome to GNEISS Revolution</h2>
+        </div>
+        <div class="left-text">
+          <p class="dark">GNEISS is a powerful blockchain platform that operates as a digital marketplace where users
+            can create coins and smart contracts to trade assets, goods, and services using a digitally-encrypted,
+            peer-to-peer exchange system.</p>
+          <p>With the exchange platform, users can create, transact, and destroy any digital asset or smart contract in a
+            personal “E-Vault” utilizing the Ethereum blockchain. </p>
+        </div>
+        <!--<a href="https://gneiss.io/legalDocumentation.pdf" target="_blank"
+          class="btn-secondary-line mobile-bottom-fix">Download Whitepaper</a>-->
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
+          <iframe  width="100%" height="315" src="https://www.youtube.com/embed/Wnq3Gt_1lXE" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- ***** About End ***** -->
+  </div>
+</section>
+<!-- ***** What is ICO End ***** -->
+
+
+<!--&lt;!&ndash; ***** Apps Start ***** &ndash;&gt;-->
+<!--<section class="section gradient" id="apps">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-6 col-md-6 col-sm-12 align-self-center mobile-bottom-fix">-->
+<!--<div class="left-heading light">-->
+<!--<h2 class="section-title">Download Apps</h2>-->
+<!--</div>-->
+<!--<div class="left-text light m-bottom-0">-->
+<!--<p>Maecenas et consequat nunc. Duis faucibus orci eu varius sagittis. In quam elit, euismod a urna quis</p>-->
+<!--<ul>-->
+<!--<li>Wallet</li>-->
+<!--<li>Transaction info</li>-->
+<!--<li>My account</li>-->
+<!--<li>Blockchain Explorer</li>-->
+<!--<li>Transfer</li>-->
+<!--<li>Connected peers to network</li>-->
+<!--</ul>-->
+<!--<a class="app-download" href="#"><img src="assets/images/store-btn-apple.svg" alt=""></a>-->
+<!--<a class="app-download" href="#"><img src="assets/images/store-btn-google.svg" alt=""></a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-6 col-md-6 col-sm-12 align-self-center">-->
+<!--<img src="assets/images/mockups/blue.png" class="img-fluid float-right" alt="App">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; ***** Apps End ***** &ndash;&gt;-->
+
+<!--&lt;!&ndash; ***** Team Start ***** &ndash;&gt;-->
+<!--<section class="section bg-bottom" id="team">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-12">-->
+<!--<div class="center-heading">-->
+<!--<h2 class="section-title">Team</h2>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="offset-lg-3 col-lg-6">-->
+<!--<div class="center-text">-->
+<!--<p>Fusce placerat pretium mauris, vel sollicitudin elit lacinia vitae. Quisque sit amet nisi erat.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">-->
+<!--<div class="team-round">-->
+<!--<div class="profile">-->
+<!--<div class="img">-->
+<!--<img src="assets/images/1.jpg" alt="">-->
+<!--<ul class="social">-->
+<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<h3 class="team-name">Lance Bogrol</h3>-->
+<!--<span>CEO & Lead Blockchain</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">-->
+<!--<div class="team-round">-->
+<!--<div class="profile">-->
+<!--<div class="img">-->
+<!--<img src="assets/images/2.jpg" alt="">-->
+<!--<ul class="social">-->
+<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<h3 class="team-name">Brian Cumin</h3>-->
+<!--<span>CTO & Senior Developer</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">-->
+<!--<div class="team-round">-->
+<!--<div class="profile">-->
+<!--<div class="img">-->
+<!--<img src="assets/images/3.jpg" alt="">-->
+<!--<ul class="social">-->
+<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<h3 class="team-name">Jackson Pot</h3>-->
+<!--<span>Blockchain App Developer</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.8s">-->
+<!--<div class="team-round">-->
+<!--<div class="profile">-->
+<!--<div class="img">-->
+<!--<img src="assets/images/4.jpg" alt="">-->
+<!--<ul class="social">-->
+<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<h3 class="team-name">Douglas Lyphe</h3>-->
+<!--<span>Community Management</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; ***** Team End ***** &ndash;&gt;-->
+
+<!--<div style=" background-color: #6574c1; margin-top: 40px;padding: 60px">-->
+<!--<div class="container">-->
+<!--</div>-->
+<!--</div>-->
+
+<section style="margin-top:25px" class="parallax">
+  <div class="parallax-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <div>
+                <h1 class="section-title mb-0" style="font-size: 2em; color: #ffffff; text-shadow: 2px 2px #4e300a;">
+                  <strong>Unlock the Power of the Blockchain, </strong></h1>
+                <h1 class="section-title mt-1" style="font-size: 2em; color: #ffffff; text-shadow: 2px 2px #4e300a;">
+                  <strong>take control of your Financial Freedom!</strong></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-lg-12 p-5" style="background: #f7f9fb; position: absolute; bottom: -20px"></div> -->
+  </div>
+</section>
+
+<!-- ***** FAQ Start ***** -->
+<section class="section bg-top pb-0" style="    padding-top: 40px;" id="faq">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="center-heading">
+          <h1 class="section-title">FAQ's</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="faq" id="accordion">
+          <div class="card">
+            <div class="card-header" id="faqHeading-1">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true"
+                  data-aria-controls="faqCollapse-1">
+                  <span class="badge">1</span>What are the benefits of using GNEISS?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
+              <div class="card-body">
+                <p>GNEISS provides everyone with a personal free market platform that is P2P, decentralized, military
+                  encrypted, and allows users to create their own digital assets or smart contracts through a simple
+                  intuitive interface that anyone can understand.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-2">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-2">
+                  <span class="badge">2</span> How long has digital currency existed?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
+              <div class="card-body">
+                <p>Bitcoin was the first digital asset created in 2009 after the 2008 financial crisis and obvious big
+                  banker corruption. Since then the main code that creates bitcoin, the “blockchain,” has been
+                  replicated and modified. Ethereum is another digital asset created in 2015 that modifies the Bitcoin
+                  blockchain to be turing complete and changes a few other things.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-3">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-3">
+                  <span class="badge">3</span> How will digital currency affect daily life in the US and around the
+                  world?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
+              <div class="card-body">
+                <p>digital assets and blockchain tech will revolutionize the financial world as much as the printing
+                  press revolutionized the distribution of books and information. Imagine never depositing your hard or
+                  soft electronic assets in a bank ever again! Not only can you be your own bank for free with the
+                  GNEISS platform but you can take advantage of smart contract technology to buy/sell secured
+                  digital assets that have collateral locked in a smart contract to guarantee the value of its underlying
+                  digital asset. Thus establishing the first “Trustless Economy” that economist have been trying to
+                  create for decades.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-4">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-4">
+                  <span class="badge">4</span>Why should I use GNEISS and how is it different from other crypto
+                  exchanges?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4" data-parent="#accordion">
+              <div class="card-body">
+                <p>GNEISS has the most advanced tech and intuitively simple free market blockchain platform in the
+                  world! Instantly create and transact any ERC-20 token with the most advanced smart contracts on the
+                  planet. Also utilize smart contracts to do basically any FinTech transaction that the pros on Wall
+                  Street can do.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-5">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-5">
+                  <span class="badge">5</span> How is GNEISS helping entrepreneurs?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
+              <div class="card-body">
+                <p>GNEISS can be used to create your own digital assets, advanced smart contracts, online registration of
+                  items, allow free bitcoin transactions with the lighting network, and much much more. Entrepreneurs
+                  are grasping how the token economy will change the financial industry in incredible ways.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-6">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-6" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-6">
+                  <span class="badge">6</span>What benefits can I get from joining the GNEISS platform?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-6" class="collapse" aria-labelledby="faqHeading-6" data-parent="#accordion">
+              <div class="card-body">
+                <p>GNEISS allows any person, regardless of how tech savvy they are, to take full advantage of blockchain
+                  technology in the FinTech world. Also, referring clients to the platform will give that referrer 50%
+                  of the money made on the GNEISS platform from the person referred. Giving everyone a chance to
+                  participate in the FinTech Blockchain revolution.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="faqHeading-7">
+              <div class="mb-0">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false"
+                  data-aria-controls="faqCollapse-7">
+                  <span class="badge">7</span> How do I convert my gneiss currency into US dollars or other currencies?
+                </h5>
+              </div>
+            </div>
+            <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7" data-parent="#accordion"
+              style="z-index: 99;">
+              <div class="card-body" style="z-index: 99999; background: white; padding: 10px 30px; position: absolute;">
+                <p>GNEISS does not directly deal with ANY fiat currencies EVER. That being said, Bitcoin and Ethereum
+                  are accepted at most crypto exchanges that can easily exchange those digital assets into any fiat
+                  currency or even gold and other precious metals. Clients can also use sites like www.bitrefill.com to
+                  exchange digital assets for gift cards to all major corporations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4"></div>
+
+    </div>
+  </div>
+  <br>
+  <br>
+</section>
+
+<!-- ***** FAQ End ***** -->
+
+
+
+

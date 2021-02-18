@@ -1,0 +1,310 @@
+<div class="container-fluid marginTop">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="mt-5" style="margin-left: 10px; color: #8a8a8a;">
+          <span style="border-bottom: 2px solid #8a8a8a;"
+            >Registration Creation</span
+          >
+        </h4>
+      </div>
+      <div class="col-sm-12">
+        <div class="auth-box">
+          <div class="row justify-content-center">
+            <div class="col-sm-12">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <h6 class="mt-1" style="margin-left: 10px;">
+                    <span style="border-bottom: 2px solid #8a8a8a;"
+                      >Vital Records</span
+                    >
+                  </h6>
+                  <div class="table-responsive">
+                    <table class="table table-bordered mt-4">
+                      <tr>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.BirthCertificate"
+                          />Birth Certificate
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.MarriageRegistration"
+                          />Marriage Registration
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.DeathCertificate"
+                          />Death Certificate
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.WillTestimonial"
+                          />Will & Testimonial
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="mt-1" style="margin-left: 10px;">
+                    <span style="border-bottom: 2px solid #8a8a8a;"
+                      >Registration
+                    </span>
+                  </h6>
+                  <div class="row">
+                    <div class="col-12">
+                      <br />
+                      <select
+                        (change)="onChangeRegistrationType($event)"
+                        class="form-control"
+                      >
+                        <option value="">Select </option>
+                        <option
+                          *ngFor="let item of registrationTypeList"
+                          [value]="item.name"
+                          >{{ item.name }}</option
+                        >
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <br />
+                      <select
+                        *ngIf="regChildList.length > 0"
+                        (change)="onRegChildChange($event)"
+                        class="form-control"
+                      >
+                        <option
+                          *ngFor="let item of regChildList"
+                          [value]="item"
+                          >{{ item }}</option
+                        >
+                      </select>
+                    </div>
+                  </div>
+                  <!-- <div class="table-responsive">
+                    <table class="table table-bordered mt-4">
+                      <tr>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.Business"
+                          />Business
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.House"
+                          />House
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.Automobile"
+                          />Automobile
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.Item"
+                          />Item
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.RealEstate"
+                          />Real Estate
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.WaterborneVessel"
+                          />Waterborne Vessel
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.AeronauticalVehicle"
+                          />Aeronautical Vehicle
+                        </td>
+                        <td>
+                          <input
+                            type="radio"
+                            name="nameType"
+                            [(ngModel)]="registrationType.type"
+                            class="radio"
+                            [value]="formTypes.Spacecraft"
+                          />Spacecraft
+                        </td>
+                      </tr>
+                    </table>
+                  </div> -->
+                </div>
+              </div>
+              <br />
+
+              <!-- section 1 -->
+              <div
+                [hidden]="
+                  registrationType.type != formTypes.MarriageRegistration
+                "
+              >
+                <app-marriage-registration
+                  (open)="open($event.content, $event.msg)"
+                ></app-marriage-registration>
+              </div>
+              <!-- section 1 -->
+
+              <link
+                href="https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans&display=swap"
+                rel="stylesheet"
+              />
+
+              <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+                rel="stylesheet"
+                type="text/css"
+              />
+
+              <!-- section 1 -->
+              <div
+                [hidden]="registrationType.type != formTypes.BirthCertificate"
+              >
+                <app-birth-certificate
+                  (open)="open($event.content, $event.msg)"
+                ></app-birth-certificate>
+                <div [hidden]="registrationType.type != 'b'">b</div>
+                <div [hidden]="registrationType.type != 'c'">c</div>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.Spacecraft">
+                <app-spacecraft
+                  (open)="open($event.content, $event.msg)"
+                ></app-spacecraft>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.House">
+                <app-house
+                  (open)="open($event.content, $event.msg)"
+                ></app-house>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.RealEstate">
+                <app-real-state
+                  (open)="open($event.content, $event.msg)"
+                ></app-real-state>
+              </div>
+              <!-- section 1 -->
+
+              <div
+                [hidden]="registrationType.type != formTypes.WillTestimonial"
+              >
+                <app-will-testimonial
+                  (open)="open($event.content, $event.msg)"
+                ></app-will-testimonial>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.Business">
+                <app-business
+                  (open)="open($event.content, $event.msg)"
+                ></app-business>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.Item">
+                <app-item (open)="open($event.content, $event.msg)"></app-item>
+              </div>
+              <!-- section 1 -->
+
+              <div
+                [hidden]="registrationType.type != formTypes.DeathCertificate"
+              >
+                <app-death-certificate
+                  (open)="open($event.content, $event.msg)"
+                ></app-death-certificate>
+                <div [hidden]="registrationType.type != 'b'">b</div>
+                <div [hidden]="registrationType.type != 'c'">c</div>
+              </div>
+              <!-- section 1 -->
+
+              <div [hidden]="registrationType.type != formTypes.Automobile">
+                <app-automobile
+                  (open)="open($event.content, $event.msg)"
+                ></app-automobile>
+              </div>
+              <!-- section 1 -->
+
+              <div
+                [hidden]="
+                  registrationType.type != formTypes.AeronauticalVehicle
+                "
+              >
+                <app-aeronautical-vehicle
+                  (open)="open($event.content, $event.msg)"
+                ></app-aeronautical-vehicle>
+              </div>
+              <!-- section 1 -->
+
+              <div
+                [hidden]="registrationType.type != formTypes.WaterborneVessel"
+              >
+                <app-waterborne-vessel
+                  (open)="open($event.content, $event.msg)"
+                ></app-waterborne-vessel>
+              </div>
+              <!-- section 1 -->
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #mymodal let-modal></ng-template>
+</div>

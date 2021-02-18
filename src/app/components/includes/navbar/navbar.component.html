@@ -1,0 +1,90 @@
+<div class="loading-wrapper">
+  <div class="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky"
+  style="height:80px; z-index:9999; background-image: linear-gradient(130deg, #516093 0%, #7A88F1 100%)">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!--   <nav class="main-nav">
+        
+
+          <div>
+            <a href="/" ><img src="../../../../assets/images/logos/logo.png" style="margin-top: 4px; position: absolute;z-index:-1"></a>
+          </div>
+
+          <ul class="nav" *ngIf="authService.userAuthorization()" style="margin-top: 22px;">
+            <li><a href="/home/client-home">Home</a></li>
+            <li><a href="/marketplace">Marketplace</a></li>
+            <li><a href="/wallet">Wallet</a></li>
+            <li><a href="/history">History</a></li>
+            <li><a href="/profile">Settings</a></li>
+            <li><a (click)="logout()" style="cursor: pointer">Logout</a></li>
+          </ul>
+          <div style="margin-right:20px" class="lang" *ngIf="!authService.userAuthorization()">
+            <div class="selected">
+              <span style="font-size: 16px;" [routerLink]="['/auth/login']">Sign In</span>
+            </div>
+            <div style="margin-left:5px" class="selected">
+              <span style="font-size: 16px;" [routerLink]="['/auth/register']">Register</span>
+            </div>
+          </div>
+         
+
+          <a class='menu-trigger' *ngIf="authService.userAuthorization()">
+            <span>Menu</span>
+          </a>
+       
+        </nav> -->
+        <div style="display:flex;justify-content: space-between">
+          <div style="margin-top:4px" class="nav-logo">
+            <a href="/"><img src="../../../../assets/images/logos/logo.png"></a>
+          </div>
+
+          <div>
+            <nav *ngIf="authService.userAuthorization()" class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="/home/client-home">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/marketplace">Marketplace</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/wallet">Wallet</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/profile">Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" (click)="logout()"
+                      style="cursor: pointer">Logout</a></li>
+                </ul>
+              </div>
+
+
+            </nav>
+
+
+            <div style="margin-right:20px; display:flex; margin-top:20px" class="nav-buttons-header" *ngIf="!authService.userAuthorization()">
+              <div>
+                <button class="hover btn" style="font-size: 16px; color:6E7CD5; border:1px solid white;background:#fff; border-radius:100px;width: 100px;" [routerLink]="['/auth/login']">Sign In</button>
+              </div>
+              <div>
+                <button class="hover btn" style="font-size: 16px; margin-left:10px; color:white; border:1px solid white; border-radius:100px;width: 100px;" [routerLink]="['/auth/register']">Register</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->

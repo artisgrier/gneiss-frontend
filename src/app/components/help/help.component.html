@@ -1,0 +1,104 @@
+<section class="greyBg">
+	<div class="container-fluid ">
+
+
+		<section class="innerpageSec">
+		  <div class="container px-0">
+			  <div class="row justify-content-center">
+  <div class="col-md-8 col-sm-12 px-0 px-sm-3">
+	  <div class="Enquary-form auth-box ">
+  
+		  <div class="mb-4" style="display:flex;justify-content:flex-start;align-items: center;flex-direction: column;">
+			  
+			  <h1 >Contact Us</h1>
+			</div>
+		  <div class="">
+			  <form class="help-form-gneiss">
+  
+				  <div class="row">
+					  <div class="col-md-6 col-sm-6">
+						  <div class="form-group">
+							  <label class="" for="fname">First Name</label>
+						  
+								  <input type="text" name="fname" id="fname" name="fname" class="form-control" [(ngModel)]="form.fname">
+							  
+						  </div>
+					  
+					  </div>
+	  
+					  <div class="col-md-6 col-sm-6">
+						  <div class="form-group">
+							  <label  for="lname">Last Name</label>
+						  
+							  <input type="text" name="lname" id="lname" class="form-control" [(ngModel)]="form.lname">
+							  
+						  </div>
+					  
+					  </div>
+					  <div class="col-md-12">
+	  
+						  <div class="form-group">
+							  <label for="emailaddress">Email Address</label>
+					  
+								  <input type="email" name="emailaddress" id="emailaddress" class="form-control" [(ngModel)]="form.emailaddress">
+						  
+						  </div>
+					  </div>
+	  
+					  <div class="col-md-12">
+						  <div class="form-group">
+							  <label  for="problem">Description of Problem</label>
+					  
+								  <input class="form-control" id="problem"  (change)="doTextareaValueChange2($event)">
+						  
+						  </div>
+					  </div>
+				  
+				   <div class="col-md-12">
+					  <div class="form-group">
+						  <label  for="combobox">Category</label>
+					  
+							  <select class="form-control" id="combobox" name="combobox" [(ngModel)]="form.typeofissue">
+								  <option value="1">problem with site</option>
+								  <option value="2">business inquiry</option>
+								  <option value="3">other</option>
+							  </select>
+						  
+					  </div>
+				   </div>
+	  
+				   <div class="col-md-12">
+					  <div class="form-group">
+						  <label  for="site">Please specify:</label>
+					  
+							  <textarea id="site" class="form-control" rows="5" (change)="doTextareaValueChange1($event)"></textarea>
+					  
+					  </div>
+				   </div>
+			  
+				   <div class="col-sm-12 mt-3">
+					  <div class="form-element text-center">
+						  <button type="button" class="btn-secondary-box" (click)="help()">Submit</button>
+					  </div>
+					</div>
+				  </div>
+			  
+  
+			  
+  
+  
+			  </form>
+		  </div>
+	  </div>
+  </div>
+  
+			  </div>
+			 
+		  </div>
+	  </section>
+	  <br>
+	</div>
+</section>
+
+
+  <ng-template #mymodal let-modal></ng-template>

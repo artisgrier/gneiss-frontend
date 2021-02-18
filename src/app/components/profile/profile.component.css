@@ -1,0 +1,21 @@
+.title-auth{font-weight: 400;
+  font-size: 30px;
+  color: #3B566E;
+  letter-spacing: 1.30px;
+  line-height: 40px;
+  margin-bottom: 20px;}
+
+
+.btn-secondary-box:hover{
+  background: #e7100e !important;
+}
+.pageTitle {
+  color: #626DB0;
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 0;
+  padding-right: 100px;
+  text-align: left;
+}
+.mx-auto{margin: 0 auto;}
